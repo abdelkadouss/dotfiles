@@ -6,6 +6,9 @@
     babarot/afx # a package manager
     junegunn/fzf # a file fuzzy finder
 
+    # utils
+    carapace-sh/carapace-bin
+
   ]
 
   cpbb: [
