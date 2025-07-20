@@ -1,4 +1,5 @@
 .config/ghostty
+.config/kitty
 .config/nushell
 .config/nvim
 .config/yazi
