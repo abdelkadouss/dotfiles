@@ -1,0 +1,38 @@
+[opener]
+play_sound = [
+	{ run = 'wezterm start mpv --no-video "$@"', orphan = true, for = "unix" },
+]
+view_document = [
+	{ run = 'zathura "$@"', orphan = true, for = "unix" },
+]
+view_image = [
+	{ run = 'qview "$@"', orphan = true, for = "unix" },
+]
+view_svg = [
+  { run = 'nu -c "start \"$@\""', orphan = true, for = "unix" },
+]
+# ...
+[open]
+prepend_rules = [
+	{ name = "*.mp3", use = "play_sound" },
+	{ name = "*.pdf", use = "view_document" },
+  { name = "*.png", use = "view_image" },
+  { name = "*.jpg", use = "view_image" },
+  { name = "*.jpeg", use = "view_image" },
+  { name = "*.gif", use = "view_image" },
+  { name = "*.svg", use = "view_svg" },
+  { name = "*.webp", use = "view_image" },
+  { name = "*.avi", use = "view_image" },
+]
+
+
+# prefetch
+[[plugin.prepend_fetchers]]
+id   = "git"
+name = "*"
+run  = "git"
+
+[[plugin.prepend_fetchers]]
+id   = "git"
+name = "*/"
+run  = "git"

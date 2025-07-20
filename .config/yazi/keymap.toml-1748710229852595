@@ -1,0 +1,10 @@
+[[manager.prepend_keymap]]
+on   = [ "g", "h" ]
+run  = "hidden"
+desc = "Toggle hidden files"
+
+# Jump to char
+# [[manager.prepend_keymap]]
+# on   = "F"
+# run  = "plugin jump-to-char"
+# desc = "Jump to char"
