@@ -1,0 +1,39 @@
+{
+  cpbb: [
+    # cmd runners
+    just
+    mask
+    mprocs
+
+    nu # a modern shell
+
+    # dev tools
+    zellij # terminal multiplexer
+    bat # cat files with syntax highlighting
+    fd-find # file finder
+    ripgrep # grep
+    tlrc # cheatsheets
+    lstr # file tree
+    kdlfmt # format kdl files
+
+  ]
+
+  eget: [
+    terrastruct/d2 # diagram as code compiler
+    stefanlogue/meteor # a tool to write a better commit messages in Chaa'Allah
+    sqlc-dev/sqlc # sql compiler
+
+    ollama/ollama # an ai tool
+
+    #FIXME: broken
+    # neovim/neovim # text editor
+
+  ]
+
+  go: [
+    # ai
+    github.com/opencode-ai/opencode@latest
+
+  ]
+
+}

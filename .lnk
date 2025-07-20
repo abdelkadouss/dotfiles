@@ -3,5 +3,6 @@
 .config/mpv
 .config/nushell
 .config/nvim
+.config/pkg
 .config/yazi
 .config/zellij

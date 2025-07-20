@@ -1,0 +1,22 @@
+{
+  eget: [
+    # fs
+    babarot/gomi # an rm alternate
+    yarlson/lnk # a dotfile manager
+    babarot/afx # a package manager
+    junegunn/fzf # a file fuzzy finder
+
+  ]
+
+  cpbb: [
+    # fs
+    zoxide # a faster cd
+
+    # visual
+    viu
+
+    starship # shell prompt
+
+  ]
+
+}
