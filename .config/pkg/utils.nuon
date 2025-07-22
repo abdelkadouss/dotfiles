@@ -1,13 +1,17 @@
 {
   eget: [
     # fs
-    babarot/gomi # an rm alternate
-    yarlson/lnk # a dotfile manager
-    babarot/afx # a package manager
-    junegunn/fzf # a file fuzzy finder
+    { name: gomi, input: babarot/gomi } # an rm alternate
+    { name: lnk, input: yarlson/lnk } # a dotfile manager
+    { name: afx, input: babarot/afx } # a package manager
+    { name: fzf, input: junegunn/fzf } # a file fuzzy finder
 
     # utils
-    carapace-sh/carapace-bin
+    {
+      name: carapace
+      input: carapace-sh/carapace-bin
+      file: carapace
+    }
 
   ]
 

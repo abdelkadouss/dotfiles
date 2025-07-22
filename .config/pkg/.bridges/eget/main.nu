@@ -13,11 +13,46 @@ bridge new {
   },
   usege: {
     install: {
-      script: {|pkg:string|
+      script: {|pkg:string, opts|#:record<name:string, file?:string, all?:bool, asset?:string,tag:string target?:string>
         mkdir out;
-        eget --to out $pkg # FIXME: --all --asset ^.t
+        mut cmd = [ "eget", "--to", "out" ];
 
-        let path = (ls out | where type == file | get name | first);
+        if ( $opts.file? | is-not-empty ) {
+          $cmd = ($cmd | append [ "--file", $opts.file ] )
+
+        } else if ( $opts.all? == true ) {
+          $cmd = ($cmd | append "--all" )
+
+        }
+
+        if ( $opts.asset? | is-not-empty ) {
+          $cmd = ($cmd | append [ "--asset", $opts.asset ] )
+
+        }
+
+        if ( $opts.tag? | is-not-empty ) {
+          $cmd = ($cmd | append [ "--tag", $opts.tag ] )
+
+        }
+
+        $cmd = ( $cmd | append $pkg );
+
+        run-external $cmd
+        | print -e $in;
+
+        let path = (
+          try {
+            [
+              out
+              $opts.target
+            ] | path join
+
+          } catch {
+            ( ls out | where type == file | get name | first )
+
+          }
+        );
+
         {
           version: (
             try {

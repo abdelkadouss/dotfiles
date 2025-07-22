@@ -10,7 +10,7 @@
     # dev tools
     zellij # terminal multiplexer
     bat # cat files with syntax highlighting
-    fd-find # file finder
+    { name: fd, input: fd-find } # file finder
     ripgrep # grep
     tlrc # cheatsheets
     lstr # file tree
@@ -19,20 +19,35 @@
   ]
 
   eget: [
-    terrastruct/d2 # diagram as code compiler
-    stefanlogue/meteor # a tool to write a better commit messages in Chaa'Allah
-    sqlc-dev/sqlc # sql compiler
+    { name: d2, input: terrastruct/d2 } # diagram as code compiler
+    { name: meteor, input: stefanlogue/meteor } # a tool to write a better commit messages in Chaa'Allah
+    {
+      name: sqlc
+      input: sqlc-dev/sqlc
+      asset: ^.tar.gz
+    } # sql compiler
 
-    ollama/ollama # an ai tool
+    {
+      name: ollama
+      input: ollama/ollama
+      asset: ^.tgz
+    } # an ai tool
 
-    #FIXME: broken
-    # neovim/neovim # text editor
+    # { # FIXME: need dep and lib system
+    #   name: neovim,
+    #   input: neovim/neovim
+    #   all: true
+    #   target: nvim
+    # } # text editor
 
   ]
 
   go: [
     # ai
-    github.com/opencode-ai/opencode@latest
+    {
+      name: opencode
+      input: github.com/opencode-ai/opencode@latest
+    }
 
   ]
 
