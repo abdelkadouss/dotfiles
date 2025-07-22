@@ -1,0 +1,76 @@
+[filter "lfs"]
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+	clean = git-lfs clean -- %f
+
+[user]
+	name = abdelkadous
+	email = development.abdelkadous@gmail.com
+
+[core]
+  pager = delta
+  compression = 9
+  whitespace = error
+  preloadindex = true
+
+[interactive]
+  diffFilter = delta --color-only
+
+[diff]
+  context = 3
+  renames = copies
+  interHunkContext = 10
+
+[delta]
+  navigate = true  # use n and N to move between diff sections
+  dark = true      # or light = true, or omit for auto-detection
+
+[merge]
+  conflictstyle = zdiff3
+
+[init]
+  templateDir = ~/.config/git/template
+  defaultBranch = dev
+
+[commit]
+  template = ~/.config/git/template/commit-msg
+
+[push]
+  autoSetupRemote = true
+  default = current
+  followTags = true
+
+[pull]
+  default = current
+  rebase = true
+
+[credential]
+  helper = cache
+
+[interactive]
+  diffFilter = delta --color-only
+  singlekey = true
+
+[status]
+  branch = true
+  showStash = true
+  showUntrackedFiles = all
+
+[url "git@github.com:"]
+	insteadOf = gh:
+
+[url "git@gitea.com:"]
+  insteadOf = tea:
+
+[url "git@codeberg.org:"]
+  insteadOf = cb:
+
+[url "git@github.com:abdelkadous/"]
+  insteadOf = mh:
+
+[url "git@gitea.com:abdelkadous/"]
+  insteadOf = mt:
+
+[url "git@codeberg.org:abdelkadous/"]
+  insteadOf = mb:

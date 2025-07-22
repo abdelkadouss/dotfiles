@@ -1,4 +1,5 @@
 .config/ghostty
+.config/git
 .config/kitty
 .config/mpv
 .config/nushell
