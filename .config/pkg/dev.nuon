@@ -15,6 +15,7 @@
     tlrc # cheatsheets
     lstr # file tree
     kdlfmt # format kdl files
+    neovide # gui for neovim
 
   ]
 
@@ -33,7 +34,18 @@
       asset: ^.tgz
     } # an ai tool
 
-    # { # FIXME: need dep and lib system
+    {
+      name: goneovim
+      input: akiyosi/goneovim
+    } # gui for neovim
+
+    # FIXME: need dep and lib system
+    # {
+    #   name: helix
+    #   input: helix-editor/helix
+    # }
+
+    # {
     #   name: neovim,
     #   input: neovim/neovim
     #   all: true

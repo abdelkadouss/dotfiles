@@ -2,11 +2,15 @@
 # background = #11111b
 # background = #181825
 background = #000000
-# theme = catppuccin-mocha
-theme = tokyonight_night
+theme = catppuccin-mocha
+# theme = tokyonight_night
 
 # font
-font-family = MonaspiceRnVar Nerd Font
+font-family = Monaspace Radon Var
+font-family-italic = Monaspace Krypton Var
+font-family-bold-italic = Monaspace Krypton Var
+font-variation = wght=500
+font-variation-bold = wght=1100
 font-size = 25
 font-feature = ss01
 font-feature = ss02
@@ -22,11 +26,11 @@ font-feature = liga
 
 # cursor
 cursor-style-blink = true
+cursor-invert-fg-bg
 
 # window
 window-decoration = auto
 window-padding-y = 4
-cursor-invert-fg-bg
 # background-opacity = 0.95
 background-blur = 1
 
@@ -43,3 +47,12 @@ macos-titlebar-proxy-icon = visible
 keybind = global:cmd+grave_accent=toggle_quick_terminal
 keybind = global:cmd+alt+g=scroll_to_top
 keybind = global:cmd+alt+shift+G=scroll_to_top
+keybind = global:super+l=goto_split:right
+keybind = super+h=goto_split:left
+keybind = super+h=goto_split:left
+keybind = super+b=scroll_page_up
+keybind = super+f=scroll_page_down
+keybind = super+shift+g=scroll_to_bottom
+keybind = super+g>g=scroll_to_top
+keybind = super+alt+v=write_scrollback_file:open
+keybind = super+alt+b=write_scrollback_file:paste
