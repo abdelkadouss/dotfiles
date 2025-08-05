@@ -7,7 +7,7 @@ theme = catppuccin-mocha
 
 # font
 font-family = Monaspace Radon Var
-font-family-italic = Monaspace Krypton Var
+font-family-italic = IBM Plex Mono
 font-family-bold-italic = Monaspace Krypton Var
 font-variation = wght=500
 font-variation-bold = wght=1100

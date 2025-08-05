@@ -24,7 +24,7 @@
 
     starship # shell prompt
     vivid # LS_COLORS generator
-    graphite # a toolbox for 2D content creation
+    pastel # a tool to convert colors and work with them
 
 
   ]
