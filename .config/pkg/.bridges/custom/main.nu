@@ -17,7 +17,7 @@ bridge new {
   },
   usege: {
     install: {
-      script: {|pkg:string|
+      script: {|pkg:string, opts|
         let script = (
           [
             $env.source_dir

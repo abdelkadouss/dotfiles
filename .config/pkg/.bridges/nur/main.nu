@@ -14,7 +14,7 @@ bridge new {
   },
   usege: {
     install: {
-      script: {|pkg:string|
+      script: {|pkg:string, opts|
         nix profile install nixpkgs#($pkg) --profile ./out
         | print -e $in;
 

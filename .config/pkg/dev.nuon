@@ -39,6 +39,16 @@
       input: akiyosi/goneovim
     } # gui for neovim
 
+    {
+      name: hermit
+      input: cashapp/hermit
+    } # Hermit installs tools for software projects in self-contained, isolated sets, so your team, your contributors, and your CI have the same consistent tooling.
+
+    {
+      name: goose
+      input: block/goose # AI agent that goes beyond code suggestions - install, execute, edit, and test with any LLM 
+    }
+
     # FIXME: need dep and lib system
     # {
     #   name: helix

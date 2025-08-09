@@ -17,7 +17,7 @@ bridge new {
   },
   usege: {
     install: {
-      script: {|pkg:string|
+      script: {|pkg:string, opts|
         with-env {
           GOPATH: ("." | path expand),
           GOPROXY: 'https://proxy.golang.org,direct',

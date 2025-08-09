@@ -19,7 +19,7 @@ bridge new {
   },
   usege: {
     install: {
-      script: {|pkg:string|
+      script: {|pkg:string, opts|
         mkdir out;
         cargo install $pkg --root out
         {
