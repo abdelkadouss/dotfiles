@@ -7,6 +7,10 @@
 
     nu # a modern shell
 
+    # tool managers
+    mise
+    usage-cli # cli to show usage of commands
+
     # dev tools
     zellij # terminal multiplexer
     bat # cat files with syntax highlighting
@@ -47,6 +51,22 @@
     {
       name: goose
       input: block/goose # AI agent that goes beyond code suggestions - install, execute, edit, and test with any LLM 
+    }
+
+    {
+      name: asdf # a tool manager
+      input: asdf-vm/asdf
+      asset: ^.tar.gz.
+    }
+
+    {
+      name: proto # a tool manager
+      input: moonrepo/proto
+    }
+
+    {
+      name: moon # a projects manager
+      input: moonrepo/moon
     }
 
     # FIXME: need dep and lib system
