@@ -1,0 +1,25 @@
+eget {
+  // fs
+  gomi "babarot/gomi" // an rm alternate
+  lnk "yarlson/lnk" // a dotfile manager
+  afx "babarot/afx" // a package manager
+  fzf "junegunn/fzf" // a file fuzzy finder
+
+  // utils
+  carapace "carapace-sh/carapace-bin" file="carapace"
+
+}
+
+cargo {
+  // fs
+  zoxide // a faster cd
+
+  // visual
+  viu
+
+  starship // shell prompt
+  vivid // LS_COLORS generator
+  pastel // a tool to convert colors and work with them
+
+
+}
