@@ -44,15 +44,16 @@ macos-icon-frame = beige
 macos-titlebar-proxy-icon = visible
 
 # keybinds
-keybind = global:cmd+grave_accent=toggle_quick_terminal
-keybind = global:cmd+alt+g=scroll_to_top
-keybind = global:cmd+alt+shift+G=scroll_to_top
-keybind = global:super+l=goto_split:right
+keybind = super+grave_accent=toggle_quick_terminal
+keybind = super+j=goto_split:down
+keybind = super+k=goto_split:up
+keybind = super+l=goto_split:right
 keybind = super+h=goto_split:left
-keybind = super+h=goto_split:left
-keybind = super+b=scroll_page_up
-keybind = super+f=scroll_page_down
-keybind = super+shift+g=scroll_to_bottom
-keybind = super+g>g=scroll_to_top
-keybind = super+alt+v=write_scrollback_file:open
-keybind = super+alt+b=write_scrollback_file:paste
+keybind = super+shift+b=scroll_page_up
+keybind = super+shift+f=scroll_page_down
+keybind = alt+g=scroll_to_bottom
+keybind = super+shift+g>g=scroll_to_top
+keybind = super+shift+v=write_scrollback_file:open
+keybind = super+shift+p=write_scrollback_file:paste
+keybind = super+shift+d=new_split:down
+keybind = super+shift+r=new_split:right
