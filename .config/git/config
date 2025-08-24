@@ -4,6 +4,9 @@
 	required = true
 	clean = git-lfs clean -- %f
 
+[pager]
+	diff = diffnav
+
 [user]
 	name = abdelkadous
 	email = development.abdelkadous@gmail.com
@@ -15,16 +18,21 @@
   preloadindex = true
 
 [interactive]
-  diffFilter = delta --color-only
+  diffFilter = delta --color-only --features side-by-side
 
 [diff]
   context = 3
   renames = copies
   interHunkContext = 10
 
+[include]
+	path = PATH/TO/delta/themes/catppuccin.gitconfig
+
 [delta]
   navigate = true  # use n and N to move between diff sections
   dark = true      # or light = true, or omit for auto-detection
+  side-by-side = true
+	features = catppuccin-mocha
 
 [merge]
   conflictstyle = zdiff3
