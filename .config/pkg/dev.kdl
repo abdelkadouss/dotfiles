@@ -1,47 +1,49 @@
 eget {
-    d2 "terrastruct/d2" // diagram as code compiler
-    meteor "stefanlogue/meteor" // a tool to write a better commit messages in Chaa'Allah
-    
-    sqlc "sqlc-dev/sqlc" asset="^.tar.gz" // sql compiler
+  d2 "terrastruct/d2" // diagram as code compiler
+  meteor "stefanlogue/meteor" // a tool to write a better commit messages in Chaa'Allah
 
-    ollama "ollama/ollama" asset="^.tgz" // an ai tool
+  sqlc "sqlc-dev/sqlc" asset="^.tar.gz" // sql compiler
 
-    goneovim "akiyosi/goneovim" // gui for neovim
+  ollama "ollama/ollama" asset="^.tgz" // an ai tool
 
-    hermit "cashapp/hermit" // Hermit installs tools for software projects in self-contained, isolated sets, so your team, your contributors, and your CI have the same consistent tooling.
+  goneovim "akiyosi/goneovim" // gui for neovim
 
-    goose "block/goose" // AI agent that goes beyond code suggestions - install, execute, edit, and test with any LLM
+  hermit "cashapp/hermit" // Hermit installs tools for software projects in self-contained, isolated sets, so your team, your contributors, and your CI have the same consistent tooling.
 
-    asdf "asdf-vm/asdf" asset="^.tar.gz." // a tool manager
+  goose "block/goose" // AI agent that goes beyond code suggestions - install, execute, edit, and test with any LLM
 
-    proto "moonrepo/proto" // a tool manager
+  asdf "asdf-vm/asdf" asset="^.tar.gz." // a tool manager
 
-    moon "moonrepo/moon" // a projects manager
+  proto "moonrepo/proto" // a tool manager
 
-    hx "helix-editor/helix" keep_structure=#true entry_point="hx" // a code editor
+  moon "moonrepo/moon" // a projects manager
 
-    nvim "neovim/neovim" keep_structure=#true entry_point="bin/nvim" // a text editor
+  hx "helix-editor/helix" keep_structure=#true entry_point="hx" // a code editor
+
+  nvim "neovim/neovim" keep_structure=#true entry_point="bin/nvim" // a text editor
+  gd "dlvhdr/gh-dash" // A beautiful CLI dashboard for GitHub
+  diffnav "dlvhdr/diffnav" // A git diff pager based on delta but with a file tree
 }
 
 cargo {
-    // cmd runners
-    just
-    mask
-    mprocs
+  // cmd runners
+  just
+  mask
+  mprocs
 
-    nu // a modern shell
+  nu // a modern shell
 
-    // tool managers
-    mise
-    usage-cli // cli to show usage of commands
+  // tool managers
+  mise
+  usage-cli // cli to show usage of commands
 
-    // dev tools
-    zellij // terminal multiplexer
-    bat // cat files with syntax highlighting
-    fd "fd-find" // file finder
-    ripgrep // grep
-    tlrc // cheatsheets
-    lstr // file tree
-    kdlfmt // format kdl files
-    neovide // gui for neovim
+  // dev tools
+  zellij // terminal multiplexer
+  bat // cat files with syntax highlighting
+  fd "fd-find" // file finder
+  ripgrep // grep
+  tlrc // cheatsheets
+  lstr // file tree
+  kdlfmt // format kdl files
+  neovide // gui for neovim
 }
