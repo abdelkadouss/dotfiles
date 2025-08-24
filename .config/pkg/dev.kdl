@@ -12,7 +12,7 @@ eget {
 
     goose "block/goose" // AI agent that goes beyond code suggestions - install, execute, edit, and test with any LLM
 
-    asdf "asdf-vm/asdf" asset=".tar.gz." // a tool manager
+    asdf "asdf-vm/asdf" asset="^.tar.gz." // a tool manager
 
     proto "moonrepo/proto" // a tool manager
 

@@ -5,7 +5,7 @@ config {
   }
   output {
     target-dir "/opt/pkg"
-    load-path "/run/pkg"
+    load-path "/usr/local/pkg"
   }
   db {
     path "/var/db/pkg/packages.db"
