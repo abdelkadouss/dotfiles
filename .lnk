@@ -1,4 +1,5 @@
 .config/fish
+.config/gh-dash/config.yml
 .config/ghostty
 .config/git
 .config/kitty
