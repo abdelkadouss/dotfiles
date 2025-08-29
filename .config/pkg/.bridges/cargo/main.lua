@@ -4,13 +4,13 @@ local install = function(input, opts)
 
   local cmd
   if opts.crate then
-    cmd = { "cargo", "install", input, "--root", "out", "-y" }
+    cmd = { "cargo", "install", input, "--root", "out" }
     if opts.features then
       table.insert(cmd, "--features")
       table.insert(cmd, opts.features)
     end
   elseif opts.git then
-    cmd = { "cargo", "install", "--git", input, "--root", "out", "-y" }
+    cmd = { "cargo", "install", "--git", input, "--root", "out" }
     if opts.branch then
       table.insert(cmd, "--branch")
       table.insert(cmd, opts.branch)

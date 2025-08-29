@@ -1,5 +1,5 @@
 eget {
-  ghostty "https://release.files.ghostty.org/1.1.3/Ghostty.dmg" after_hook="mkdir -p tmp; mv ./out/Ghostty.dmg ./tmp; hdiutil attach ./tmp/Ghostty.dmg; cp -rf /Volumes/Ghostty/Ghostty.app ./out; hdiutil detach /Volumes/Ghostty/; rm -rf ./tmp" dir="Ghostty.app" entry_point="Contents/MacOS/Ghostty"
+  //ghostty "https://release.files.ghostty.org/1.1.3/Ghostty.dmg" after_hook="mkdir -p tmp; mv ./out/Ghostty.dmg ./tmp; hdiutil attach ./tmp/Ghostty.dmg; cp -rf /Volumes/Ghostty/Ghostty.app ./out; hdiutil detach /Volumes/Ghostty/; rm -rf ./tmp" dir="Ghostty.app" entry_point="Contents/MacOS/Ghostty"
   // obsidian "obsidianmd/obsidian-releases" after_hook="mkdir -p tmp; mv ./out/* ./tmp; hdiutil attach ./tmp/Obsidian.dmg; mv /Volumes/Obsidian/Obsidian.app ./out; hdiutil detach /Volumes/Obsidian/; rm -rf ./tmp" dir="Obsidian.app" entry_point="Contents/MacOS/Obsidian"
 }
 
