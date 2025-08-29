@@ -5,7 +5,7 @@ eget {
 
 cargo {
   viu // tool to visualize images in the terminal
-  asciinema // a tool to record terminal videos (gifs)
+  asciinema "https://github.com/asciinema/asciinema" git=#true// a tool to record terminal videos (gifs)
   mdbook // a tool to make a book from markdown
   delta git-delta
   resvg

@@ -16,6 +16,8 @@ cargo {
   vivid // LS_COLORS generator
   pastel // a tool to convert colors and work with them
   tokei // a tool to count your code
-  tldr "tlrc" // cheatsheets
+  //tldr "tlrc" // cheatsheets
   binwalk // a tool to check the binary (good for checking if there malware)
+  neda "neda-cli"
+  kanata
 }

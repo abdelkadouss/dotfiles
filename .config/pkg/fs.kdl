@@ -12,7 +12,7 @@ cargo {
   zoxide // a better cd
   rg "ripgrep" // a better grep
   fd "fd-find" // a better find
-  yazi "https://github.com/sxyazi/yazi.git yazi-build"// a file manager
+  yazi "https://github.com/sxyazi/yazi.git yazi-build" git=#true // a file manager
   we "watchexec-cli" // a tool that watches files and runs commands when they change
   lstr // file tree
   kondo // Cleans dependencies and build artifacts from your projects 🧹

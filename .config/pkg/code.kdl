@@ -11,6 +11,6 @@ eget {
 
 cargo {
   m "zellij" // terminal multiplexer
-  rusty-man // the man cli but for rust crates
+  //rusty-man // the man cli but for rust crates
   hyperfine // a benchmarking tool
 }

@@ -14,5 +14,5 @@ eget {
 cargo {
   mp "mprocs" // a tool to manage multiple processes
   rainfrog // a DBs viewer
-  wiki-tui // a tui for wikis
+  //wiki-tui // a tui for wikis
 }
