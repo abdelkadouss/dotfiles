@@ -1,0 +1,90 @@
+(defcfg
+  process-unmapped-keys yes
+  danger-enable-cmd yes
+  concurrent-tap-hold yes
+)
+(defsrc
+  grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
+  tab  q    w    e    r    t    y    u    i    o    p    [    ]    \
+  caps a    s    d    f    g    h    j    k    l    ;    '    ret
+  lsft z    x    c    v    b    n    m    ,    .    /    rsft    ▲
+  fn lctl lmet lalt           spc            ralt rmet rctl ◀    ▼    ▶
+)
+(defvar
+  ;; Note: consider using different time values for your different fingers.
+  ;; For example, your pinkies might be slower to release keys and index
+  ;; fingers faster.
+  tap-time 200
+  hold-time 200
+  fast-hold-time 120
+  fast-tap-time 120
+
+)
+
+(deffakekeys
+  to-base (layer-switch base)
+)
+
+(defalias
+
+  ;; home row
+  a (tap-hold $tap-time $hold-time a lsft)
+  s (tap-hold $tap-time $hold-time s (layer-toggle lcon))
+  d (tap-hold $tap-time $hold-time d lmet)
+  f (tap-hold $tap-time $hold-time f lalt)
+  j (tap-hold $tap-time $hold-time j ralt)
+  k (tap-hold $tap-time $hold-time k rmet)
+  l (tap-hold $tap-time $hold-time l rctl)
+  ; (tap-hold $tap-time $hold-time ; rsft)
+
+  ;; caps-ctrl
+  escctrl (tap-hold-press $fast-tap-time $fast-hold-time esc (layer-toggle lesc)) 
+
+  ;; Hyper key
+  mhypr (tap-hold-press $tap-time $hold-time spc (multi lsft lctl lalt lmet))
+
+  ;; copy and paste
+  c (tap-hold $tap-time $hold-time c M-c)
+  v (tap-hold $tap-time $hold-time v M-v)
+
+  ;; window mangmint
+  p (tap-hold $tap-time $hold-time p M-p)
+  o (tap-hold $tap-time $hold-time o M-o)
+  i (tap-hold $tap-time $hold-time i M-i)
+  u (tap-hold $tap-time $hold-time u M-u)
+  y (tap-hold $tap-time $hold-time y M-y)
+  g (tap-hold $tap-time $hold-time g M-g)
+  m (tap-hold $tap-time $hold-time m M-m)
+  n (tap-hold $tap-time $hold-time n M-n)
+)
+
+(deflayer base 
+  grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
+  tab  q    w    e    r    t    @y   @u   @i   @o   @p   [    ]    \
+@escctrl @a @s   @d   @f   @g   h    @j   @k   @l   @;   '    ret
+  lsft z    x    @c   @v   b    @n   @m   ,    .    /    rsft   ∅
+  ∅  ∅    ∅    ∅              spc            ∅    ∅    ∅     ∅  ∅  ∅
+)
+
+
+(deflayer lcon
+  grv  C-1  C-2  C-3  C-4  C-5  C-6  C-7  C-8  C-9  C-0  C--  C-=  C-bspc
+C-tab  C-q  C-w  C-e  C-r  C-t  C-y  C-u  C-i  C-o  C-p  C-[  C-]  C-\
+C-esc  C-lsft C-lctl C-lmet C-lalt C-g ◀  ▼  ▲   ▶  C-;  C-'  C-ret
+C-lsft C-z C-x C-c  C-v  C-b  C-n  C-m  C-,  C-.  C-/  C-rsft   ∅
+  ∅  ∅    ∅    ∅            C-spc            ∅    ∅    ∅     ∅  ∅  ∅
+)
+
+(deflayer lesc
+  grv  C-1  C-2  C-3  C-4  C-5  C-6  C-7  C-8  C-9  C-0  C--  C-=  C-bspc
+C-tab  C-q  C-w  C-e  C-r  C-t  C-y  C-u  C-i  C-o  C-p  C-[  C-]  C-\
+C-esc  C-a  C-s  C-d  C-f  C-g  ◀    ▼    ▲    ▶    C-;  C-'  C-ret
+C-lsft C-z C-x C-c  C-v  C-b  C-n  C-m  C-,  C-.  C-/  C-rsft   ∅
+  ∅  ∅    ∅    ∅            C-spc            ∅    ∅    ∅     ∅  ∅  ∅
+)
+
+;;(defchordsv2
+;;  (u i o) (macro h e l l o) 250 first-release ()
+;;  (w e r) (macro b y e)     400 first-release ()
+;;)
+
