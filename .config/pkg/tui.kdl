@@ -1,0 +1,18 @@
+eget {
+  // btop "aristocratos/btop" // a system monitor // FIXME: no build for mac os
+
+  cruch "charmbracelet/crush" asset="^.tar.gz." // yet another ai coding tool
+  goose "block/goose" // AI agent that goes beyond code suggestions - install, execute, edit, and test with any LLM
+  diffnav "dlvhdr/diffnav" // A git diff pager based on delta but with a file tree
+
+  gd "dlvhdr/gh-dash" // A beautiful CLI dashboard for GitHub
+  lz "jesseduffield/lazygit" // a git tui
+  lazydocker "jesseduffield/lazydocker" // a docker tui
+  // posting "darrenburns/posting" // an http client // FIXME: no build in github need nu to install
+}
+
+cargo {
+  mp "mprocs" // a tool to manage multiple processes
+  rainfrog // a DBs viewer
+  wiki-tui // a tui for wikis
+}

@@ -41,6 +41,15 @@ local install = function(input, opts)
   local result = handle:read("*a")
   handle:close()
 
+  if opts.after_hook then
+    local after_hoot = io.popen(opts.after_hook .. to_log_file)
+    if not after_hoot then
+      return {
+        error = "Failed to run after install hook"
+      }
+    end
+  end
+
   print(result)
 
   -- helper functions
@@ -172,9 +181,22 @@ local install = function(input, opts)
         error = "the entry_point field is required when keep_structure is true"
       }
     end
-
   elseif opts.target then
     path = path .. "out/" .. opts.target
+  elseif opts.dir then
+    if not opts.entry_point then
+      return {
+        error = "the entry_point field is required when dir is set"
+      }
+    end
+    if opts.dir == true then
+      path = path .. "out"
+    else
+      path = path .. "out/" .. opts.dir
+    end
+    entry_point = path .. "/" .. opts.entry_point
+    print("entry_point: " .. entry_point)
+    print("path: " .. path)
   else
     -- Try to find the first file in out directory
     local dir = io.popen("ls out")

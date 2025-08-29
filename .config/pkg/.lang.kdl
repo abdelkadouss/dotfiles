@@ -1,0 +1,52 @@
+// asdf of proto or mise
+
+just
+mask
+nu // a modern shell
+kdlfmt // format kdl files
+docker // try the go bridge with github.com/docker/cli.git
+git
+llvm_18
+pkg-config
+qemu
+gdb
+fontforge
+fish
+go
+bun
+deno
+lld
+gnumake
+gcc
+lua
+gnupg
+zig
+postgresql
+vim
+git
+git-lfs
+
+// cargo
+rustywind // an lsp for tailwindcss
+
+// eget
+nu-fmt "https://github.com/Rex-Sanchez/nushell_fmt.git" git=#true // a formatter for nushell (⚠️ not ready to use)
+//nufmt (⚠️ not ready to use)
+colima "abiosoft/colima" // a docker container runtime
+docker-compose "docker/compose" // docker compose
+moon "moonrepo/moon" // a projects manager
+d2 "terrastruct/d2" // diagram as code compiler
+sqlc "sqlc-dev/sqlc" asset="^.tar.gz" // sql compiler
+asdf "asdf-vm/asdf" asset="^.tar.gz." // a tool manager
+proto "moonrepo/proto" // a tool manager
+
+
+
+octave
+libiconv
+pipx
+pip
+cmake
+podman-compose
+podman
+lima

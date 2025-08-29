@@ -1,0 +1,19 @@
+eget {
+  fzf "junegunn/fzf" // a file fuzzy finder
+  // rmlint "sahib/rmlint" // Extremely fast tool to remove duplicates and other lint from your filesystem
+  gomi "babarot/gomi" // an rm alternate
+  // lftp "lavv17/lftp" // a file transfer tool
+  syncthing "syncthing/syncthing" // a p2p file sync tool
+  // axel "axel-download-accelerator/axel" // FIXME:
+}
+
+cargo {
+  dua // a better du
+  zoxide // a better cd
+  rg "ripgrep" // a better grep
+  fd "fd-find" // a better find
+  yazi // a file manager
+  we "watchexec-cli" // a tool that watches files and runs commands when they change
+  lstr // file tree
+  kondo // Cleans dependencies and build artifacts from your projects 🧹
+}

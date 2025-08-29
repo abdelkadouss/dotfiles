@@ -1,0 +1,12 @@
+eget {
+  vhs "charmbracelet/vhs" asset="^.tar.gz." // Your CLI home video recorder 📼 
+  glow "charmbracelet/glow" asset="^.tar.gz." // a terminal based markdown viewer
+}
+
+cargo {
+  viu // tool to visualize images in the terminal
+  asciinema // a tool to record terminal videos (gifs)
+  mdbook // a tool to make a book from markdown
+  delta git-delta
+  resvg
+}

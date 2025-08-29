@@ -1,0 +1,35 @@
+eget {
+  magick "ImageMagick/ImageMagick" // a tool to convert images and work with them
+  exercism "exercism/cli"
+  timewarrior "GothenburgBitFactory/timewarrior"
+}
+
+cargo {
+}
+
+// raylib
+// coreutils
+// tcpdump
+// tshark
+// iperf3
+// lsd
+// stow
+// tmux
+// pueue
+
+// bootstrap
+
+// i don't know how to install those
+ffmpeg
+mpv
+zathura
+pass
+htop
+bacon //??
+// guis (mac only issue)
+kitty
+gimp3
+sxhkd // linux only
+// i think those is from the unix coreutils
+curl
+wget

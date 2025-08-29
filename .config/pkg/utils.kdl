@@ -1,25 +1,21 @@
 eget {
   // fs
-  gomi "babarot/gomi" // an rm alternate
   lnk "yarlson/lnk" // a dotfile manager
   afx "babarot/afx" // a package manager
-  fzf "junegunn/fzf" // a file fuzzy finder
-
   // utils
   carapace "carapace-sh/carapace-bin" file="carapace"
 
+  ollama "ollama/ollama" asset="^.tgz" // a tool to manage the ai models
 }
 
 cargo {
-  // fs
-  zoxide // a faster cd
-
+  bat // a better cat
+  sd // a better sed
   // visual
-  viu
-
   starship // shell prompt
   vivid // LS_COLORS generator
   pastel // a tool to convert colors and work with them
-
-
+  tokei // a tool to count your code
+  tldr "tlrc" // cheatsheets
+  binwalk // a tool to check the binary (good for checking if there malware)
 }
