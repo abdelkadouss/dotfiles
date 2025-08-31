@@ -1,0 +1,63 @@
+(defcfg
+  process-unmapped-keys yes
+  danger-enable-cmd yes
+  concurrent-tap-hold yes
+)
+
+(defsrc
+  grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
+  tab  q    w    e    r    t    y    u    i    o    p    [    ]    \
+  caps a    s    d    f    g    h    j    k    l    ;    '    ret
+  lsft z    x    c    v    b    n    m    ,    .    /    rsft    ▲
+  fn lctl lmet lalt           spc            ralt rmet rctl ◀    ▼    ▶
+)
+
+(defvar
+  tap-time 120
+  hold-time 120
+)
+
+(deffakekeys
+  to-base (layer-switch base)
+)
+
+(defalias
+  ;; caps-ctrl
+  escctrl (tap-hold-press $tap-time $hold-time esc (layer-toggle lesc)) 
+
+  ;; the space mod
+  mspc (tap-hold $tap-time $hold-time spc (layer-toggle mods))
+
+  ;; home row mods
+  s (tap-hold $tap-time $hold-time s lctl)
+  d (tap-hold $tap-time $hold-time d lmet)
+  f (tap-hold $tap-time $hold-time f lalt)
+  j (tap-hold $tap-time $hold-time j ralt)
+  k (tap-hold $tap-time $hold-time k rmet)
+  l (tap-hold $tap-time $hold-time l rctl)
+
+)
+
+(deflayer base 
+  grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
+  tab  q    w    e    r    t    y    u    i    o    p    [    ]    \
+@escctrl a  s    d    f    g    h    j    k    l    ;    '    ret
+  lsft z    x    c    v    b    n    m    ,    .    /    rsft     ∅
+  ∅  ∅    ∅    ∅            @mspc            ∅    ∅    ∅     ∅  ∅  ∅
+)
+
+(deflayer mods
+  _    _    _    _    _    _    _    _    _    _    _    _    _    _
+  _    _    _    _    _    _    _    _    _    _    _    _    _    _
+@escctrl _ @s   @d   @f    _    _   @j   @k   @l    _    _    _
+  _    _    _    _    _    _    _    _    _    _    _    _      _
+  _  _    _    _               _             _    _    _     _  _  _
+)
+
+(deflayer lesc
+  grv  C-1  C-2  C-3  C-4  C-5  C-6  C-7  C-8  C-9  C-0  C--  C-=  C-bspc
+C-tab  C-q  C-w  C-e  C-r  C-t  C-y  C-u  C-i  C-o  C-p  C-[  C-]  C-\
+C-esc  C-a  C-s  C-d  C-f  C-g  ◀    ▼    ▲    ▶    C-;  C-'  C-ret
+C-lsft C-z  C-x  C-c  C-v  C-b  C-n  C-m  C-,  C-.  C-/  C-rsft ∅
+  ∅  ∅    ∅    ∅            C-spc            ∅    ∅    ∅     ∅  ∅  ∅
+)
