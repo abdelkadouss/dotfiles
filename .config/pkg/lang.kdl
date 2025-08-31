@@ -1,0 +1,13 @@
+// this is a list of the runtimes, compilers, lsp... that are not exist in mise or only available via the repo or a cargo or a url
+cargo {
+  nu // a new type of package manager, NOTE: i put this here because it's important
+  kdlfmt // format kdl files
+  rustywind // a tailwind css rust lsp
+  fish "https://github.com/fish-shell/fish-shell" git=#true // fish shell, NOTE: i put this here because i use it for the shell completion in my nushell config
+}
+
+eget {
+  d2 "terrastruct/d2" // diagram as code compiler
+  sqlc "sqlc-dev/sqlc" asset="tar.gz" // sql compiler
+  moon "moonrepo/moon" // a projects manager
+}

@@ -6,6 +6,12 @@ eget {
   carapace "carapace-sh/carapace-bin" file="carapace"
 
   ollama "ollama/ollama" asset="^.tgz" // a tool to manage the ai models
+  yq "mikefarah/yq" asset="tar.gz" file="yq_*" // a tool to parse YAML, JSON, XML, CSV, TOML files from cli // NOTE: this one is a dep for install the android-sdk via mise
+
+  pass "https://git.zx2c4.com/password-store/snapshot/password-store-master.tar.xz" keep_structure=#true after_hook="cd out; make install DESTDIR=out PREFIX=''" target="out" entry_point="bin/pass"
+
+
+  exercism "exercism/cli" file="exercism" // a programming exercise
 }
 
 cargo {
@@ -19,5 +25,5 @@ cargo {
   //tldr "tlrc" // cheatsheets
   binwalk // a tool to check the binary (good for checking if there malware)
   neda "neda-cli"
-  kanata
+  kanata "kanata" crate=#true features=cmd 
 }
