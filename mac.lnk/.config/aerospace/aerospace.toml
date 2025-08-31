@@ -93,13 +93,13 @@ automatically-unhide-macos-hidden-apps = false
 
     # See: https://nikitabobko.github.io/AeroSpace/commands#layout
     cmd-slash = 'layout tiles horizontal vertical'
-    cmd-comma = 'layout accordion horizontal vertical'
+    cmd-semicolon = 'layout accordion horizontal vertical'
 
     # See: https://nikitabobko.github.io/AeroSpace/commands#focus
-    cmd-shift-h = 'focus left'
-    cmd-shift-j = 'focus down'
-    cmd-shift-k = 'focus up'
-    cmd-shift-l = 'focus right'
+    cmd-h = 'focus left'
+    cmd-j = 'focus down'
+    cmd-k = 'focus up'
+    cmd-l = 'focus right'
 
     # See: https://nikitabobko.github.io/AeroSpace/commands#move
     alt-shift-h = 'move left'
@@ -112,78 +112,34 @@ automatically-unhide-macos-hidden-apps = false
     cmd-equal = 'resize smart +50'
 
     # See: https://nikitabobko.github.io/AeroSpace/commands#workspace
-    cmd-1 = 'workspace 1'
-    cmd-2 = 'workspace 2'
-    cmd-3 = 'workspace 3'
-    cmd-4 = 'workspace 4'
-    cmd-5 = 'workspace 5'
-    cmd-6 = 'workspace 6'
-    cmd-7 = 'workspace 7'
-    cmd-8 = 'workspace 8'
-    cmd-9 = 'workspace 9'
-    cmd-a = 'workspace A' # In your config, you can drop workspace bindings that you don't need
-    cmd-b = 'workspace B'
-    # cmd-c = 'workspace C' # this is for copy in macOS
-    cmd-d = 'workspace D'
-    cmd-e = 'workspace E'
-    cmd-f = 'workspace F'
     cmd-g = 'workspace G'
     cmd-i = 'workspace I'
     cmd-m = 'workspace M'
     cmd-n = 'workspace N'
     cmd-o = 'workspace O'
     cmd-p = 'workspace P'
-    # cmd-q = 'workspace Q' # this is for quit the app in macOS
-    cmd-r = 'workspace R'
-    cmd-s = 'workspace S'
-    # cmd-t = 'workspace T' # this is for new tab in macOS
-    cmd-u = 'workspace U'
-    # cmd-v = 'workspace V' # this is for paste in macOS
-    # cmd-w = 'workspace W' # this is for close the app in macOS
-    cmd-x = 'workspace X'
     cmd-y = 'workspace Y'
-    cmd-z = 'workspace Z'
+    cmd-r = 'workspace R'
+    cmd-u = 'workspace U'
 
     # See: https://nikitabobko.github.io/AeroSpace/commands#move-node-to-workspace
-    alt-shift-1 = 'move-node-to-workspace 1'
-    alt-shift-2 = 'move-node-to-workspace 2'
-    alt-shift-3 = 'move-node-to-workspace 3'
-    alt-shift-4 = 'move-node-to-workspace 4'
-    alt-shift-5 = 'move-node-to-workspace 5'
-    alt-shift-6 = 'move-node-to-workspace 6'
-    alt-shift-7 = 'move-node-to-workspace 7'
-    alt-shift-8 = 'move-node-to-workspace 8'
-    alt-shift-9 = 'move-node-to-workspace 9'
-    alt-shift-a = 'move-node-to-workspace A'
-    alt-shift-b = 'move-node-to-workspace B'
-    # alt-shift-c = 'move-node-to-workspace C'
-    alt-shift-d = 'move-node-to-workspace D'
-    alt-shift-e = 'move-node-to-workspace E'
-    alt-shift-f = 'move-node-to-workspace F'
-    alt-shift-g = 'move-node-to-workspace G'
-    alt-shift-i = 'move-node-to-workspace I'
-    alt-shift-m = 'move-node-to-workspace M'
-    alt-shift-n = 'move-node-to-workspace N'
-    alt-shift-o = 'move-node-to-workspace O'
-    alt-shift-p = 'move-node-to-workspace P'
-    # alt-shift-q = 'move-node-to-workspace Q'
-    alt-shift-r = 'move-node-to-workspace R'
-    alt-shift-s = 'move-node-to-workspace S'
-    # alt-shift-t = 'move-node-to-workspace T'
-    alt-shift-u = 'move-node-to-workspace U'
-    # alt-shift-v = 'move-node-to-workspace V'
-    # alt-shift-w = 'move-node-to-workspace W'
-    alt-shift-x = 'move-node-to-workspace X'
-    alt-shift-y = 'move-node-to-workspace Y'
-    alt-shift-z = 'move-node-to-workspace Z'
+    cmd-ctrl-g = 'move-node-to-workspace G'
+    cmd-ctrl-i = 'move-node-to-workspace I'
+    cmd-ctrl-m = 'move-node-to-workspace M'
+    cmd-ctrl-n = 'move-node-to-workspace N'
+    cmd-ctrl-o = 'move-node-to-workspace O'
+    cmd-ctrl-p = 'move-node-to-workspace P'
+    cmd-ctrl-y = 'move-node-to-workspace Y'
+    cmd-ctrl-r = 'move-node-to-workspace R'
+    cmd-ctrl-u = 'move-node-to-workspace U'
 
     # See: https://nikitabobko.github.io/AeroSpace/commands#workspace-back-and-forth
     cmd-quote = 'workspace-back-and-forth'
     # See: https://nikitabobko.github.io/AeroSpace/commands#move-workspace-to-monitor
-    cmd-shift-tab = 'move-workspace-to-monitor --wrap-around next'
+    cmd-ctrl-tab = 'move-workspace-to-monitor --wrap-around next'
 
     # See: https://nikitabobko.github.io/AeroSpace/commands#mode
-    cmd-shift-semicolon = 'mode service'
+    cmd-ctrl-semicolon = 'mode service'
 
 # 'service' binding mode declaration.
 # See: https://nikitabobko.github.io/AeroSpace/guide#binding-modes
@@ -197,10 +153,10 @@ automatically-unhide-macos-hidden-apps = false
     # sticky is not yet supported https://github.com/nikitabobko/AeroSpace/issues/2
     # s = ['layout sticky tiling', 'mode main']
 
-    cmd-shift-h = ['join-with left', 'mode main']
-    cmd-shift-j = ['join-with down', 'mode main']
-    cmd-shift-k = ['join-with up', 'mode main']
-    cmd-shift-l = ['join-with right', 'mode main']
+    cmd-ctrl-h = ['join-with left', 'mode main']
+    cmd-ctrl-j = ['join-with down', 'mode main']
+    cmd-ctrl-k = ['join-with up', 'mode main']
+    cmd-ctrl-l = ['join-with right', 'mode main']
 
     shift-j = 'volume down'
     shift-k = 'volume up'
