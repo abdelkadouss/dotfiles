@@ -41,7 +41,7 @@ local install = function(input, opts)
   local result = handle:read("*a")
   handle:close()
 
-  if opts.after_hook then
+  if opts.after_hook and not opts.keep_structure then
     local after_hoot = io.popen(opts.after_hook .. to_log_file)
     if not after_hoot then
       return {
@@ -172,8 +172,19 @@ local install = function(input, opts)
       print("Multiple items found, keeping original structure")
     end
 
+    -- run the after hook
+    if opts.after_hook then
+      local after_hoot = io.popen(opts.after_hook .. to_log_file)
+      if not after_hoot then
+        return {
+          error = "Failed to run after install hook"
+        }
+      end
+    end
+
 
     path = path .. "out"
+    path = path .. "/" .. opts.target or path
 
     entry_point = path .. "/" .. opts.entry_point
     if not entry_point then
