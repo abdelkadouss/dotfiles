@@ -26,15 +26,15 @@
   escctrl (tap-hold-press $tap-time $hold-time esc (layer-toggle lesc)) 
 
   ;; the space mod
-  mspc (tap-hold $tap-time $hold-time spc (layer-toggle mods))
+  mspc (tap-hold-press $tap-time $hold-time spc (layer-toggle mods))
 
   ;; home row mods
-  s (tap-hold $tap-time $hold-time s lctl)
-  d (tap-hold $tap-time $hold-time d lmet)
-  f (tap-hold $tap-time $hold-time f lalt)
-  j (tap-hold $tap-time $hold-time j ralt)
-  k (tap-hold $tap-time $hold-time k rmet)
-  l (tap-hold $tap-time $hold-time l rctl)
+  s (tap-hold-press $tap-time $hold-time s lctl)
+  d (tap-hold-press $tap-time $hold-time d lmet)
+  f (tap-hold-press $tap-time $hold-time f lalt)
+  j (tap-hold-press $tap-time $hold-time j ralt)
+  k (tap-hold-press $tap-time $hold-time k rmet)
+  l (tap-hold-press $tap-time $hold-time l rctl)
 
 )
 
@@ -42,15 +42,15 @@
   grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
   tab  q    w    e    r    t    y    u    i    o    p    [    ]    \
 @escctrl a  s    d    f    g    h    j    k    l    ;    '    ret
-  lsft z    x    c    v    b    n    m    ,    .    /    rsft     ∅
+  lsft z    x    c    v    b    n    m    ,    .    /    rsft   ∅
   ∅  ∅    ∅    ∅            @mspc            ∅    ∅    ∅     ∅  ∅  ∅
 )
 
 (deflayer mods
-  _    _    _    _    _    _    _    _    _    _    _    _    _    _
-  _    _    _    _    _    _    _    _    _    _    _    _    _    _
-@escctrl _ @s   @d   @f    _    _   @j   @k   @l    _    _    _
-  _    _    _    _    _    _    _    _    _    _    _    _      _
+  (multi spc grv) (multi spc 1) (multi spc 2) (multi spc 3) (multi spc 4) (multi spc 5) (multi spc 6) (multi spc 7) (multi spc 8) (multi spc 9) (multi spc 0) (multi spc -) (multi spc =) (multi spc bspc)
+  (multi spc tab)  (multi spc q) (multi spc w) (multi spc e) (multi spc r) (multi spc t) (multi spc y) (multi spc u) (multi spc i) (multi spc o) (multi spc p) (multi spc [) (multi spc ]) (multi spc \)
+@escctrl (multi spc a) @s @d @f (multi spc g) (multi spc h) @j @k @l (multi spc ;) (multi spc ')    (multi spc ret)
+  lsft (multi spc z) (multi spc x) (multi spc c) (multi spc v) (multi spc b) (multi spc n) (multi spc m) (multi spc ,) (multi spc .) (multi spc /) rsft ∅
   _  _    _    _               _             _    _    _     _  _  _
 )
 
