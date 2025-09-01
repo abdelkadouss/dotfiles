@@ -4,6 +4,7 @@
 .config/git
 .config/kanata
 .config/kitty
+.config/mise
 .config/mpv
 .config/nushell
 .config/nvim

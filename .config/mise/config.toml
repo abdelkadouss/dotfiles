@@ -1,0 +1,18 @@
+[tools]
+dart = "latest"
+flutter = "latest"
+bun = "latest"
+go = "latest"
+java = "latest" # NOTE: this should be before the android-sdk because it's a dependency
+android-sdk = "latest"
+cmake = "latest" # NOTE: this two should be before the clang because it's a dependency
+python = "latest" # I'm not sure but I think that python is a dependency of ninja
+ninja = "latest"
+clang = "latest"
+# make = "latest"
+just = "latest"
+mask = "latest"
+colima = "latest"
+git-lfs = "latest"
+git = "latest"
+zig = "latest"
