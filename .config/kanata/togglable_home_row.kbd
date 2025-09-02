@@ -29,12 +29,12 @@
   mspc (tap-hold-press $tap-time $hold-time spc (layer-toggle mods))
 
   ;; home row mods
-  s (tap-hold-press $tap-time $hold-time s lctl)
-  d (tap-hold-press $tap-time $hold-time d lmet)
-  f (tap-hold-press $tap-time $hold-time f lalt)
-  j (tap-hold-press $tap-time $hold-time j ralt)
-  k (tap-hold-press $tap-time $hold-time k rmet)
-  l (tap-hold-press $tap-time $hold-time l rctl)
+  s (tap-hold-press $tap-time $hold-time s (layer-toggle lesc))
+  d (tap-hold-press $tap-time $hold-time d (layer-toggle met))
+  f (tap-hold-press $tap-time $hold-time f (layer-toggle alt))
+  j (tap-hold-press $tap-time $hold-time j (layer-toggle alt))
+  k (tap-hold-press $tap-time $hold-time k (layer-toggle met))
+  l (tap-hold-press $tap-time $hold-time l (layer-toggle rctrl))
 
 )
 
@@ -60,4 +60,28 @@ C-tab  C-q  C-w  C-e  C-r  C-t  C-y  C-u  C-i  C-o  C-p  C-[  C-]  C-\
 C-esc  C-a  C-s  C-d  C-f  C-g  ◀    ▼    ▲    ▶    C-;  C-'  C-ret
 C-lsft C-z  C-x  C-c  C-v  C-b  C-n  C-m  C-,  C-.  C-/  C-rsft ∅
   ∅  ∅    ∅    ∅            C-spc            ∅    ∅    ∅     ∅  ∅  ∅
+)
+
+(deflayer alt
+  grv  A-1  A-2  A-3  A-4  A-5  A-6  A-7  A-8  A-9  A-0  A--  A-=  A-bspc
+A-tab  A-q  A-w  A-e  A-r  A-t  A-y  A-u  A-i  A-o  A-p  A-[  A-]  A-\
+A-esc  A-a  A-s  A-d  A-f  A-g  A-h  A-j  A-k  A-l  A-;  A-'  A-ret
+A-lsft A-z  A-x  A-c  A-v  A-b  A-n  A-m  A-,  A-.  A-/  A-rsft ∅
+  ∅  ∅    ∅    ∅            A-spc            ∅    ∅    ∅     ∅  ∅  ∅
+)
+
+(deflayer rctrl
+  grv  RC-1  RC-2  RC-3  RC-4  RC-5  RC-6  RC-7  RC-8  RC-9  RC-0  RC--  RC-=  RC-bspc
+RC-tab  RC-q  RC-w  RC-e  RC-r  RC-t  RC-y  RC-u  RC-i  RC-o  RC-p  RC-[  RC-]  RC-\
+RC-esc  RC-a  RC-s  RC-d  RC-f  RC-g  RC-h  RC-j  RC-k  RC-l  RC-;  RC-'  RC-ret
+RC-lsft RC-z  RC-x  RC-c  RC-v  RC-b  RC-n  RC-m  RC-,  RC-.  RC-/  RC-rsft ∅
+  ∅  ∅    ∅    ∅            RC-spc            ∅    ∅    ∅     ∅  ∅  ∅
+)
+
+(deflayer met
+  grv  M-1  M-2  M-3  M-4  M-5  M-6  M-7  M-8  M-9  M-0  M--  M-=  M-bspc
+M-tab  M-q  M-w  M-e  M-r  M-t  M-y  M-u  M-i  M-o  M-p  M-[  M-]  M-\
+M-esc  M-a  M-s  M-d  M-f  M-g  M-h  M-j  M-k  M-l  M-;  M-'  M-ret
+M-lsft M-z  M-x  M-c  M-v  M-b  M-n  M-m  M-,  M-.  M-/  M-rsft ∅
+  ∅  ∅    ∅    ∅            M-spc            ∅    ∅    ∅     ∅  ∅  ∅
 )
