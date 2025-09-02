@@ -1,0 +1,11 @@
+#!/bin/bash
+config_file=~/.config/scripts.conf
+get_conf() {
+  if [[ -f $config_file ]]; then
+    cat $config_file | grep "$1" | cut -d ':' -f 2
+  fi
+}
+
+MENU_LIST_CMD=$(get_conf menu_list)
+
+ls /usr/local/gui | $MENU_LIST_CMD | sh

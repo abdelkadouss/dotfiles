@@ -1,0 +1,28 @@
+#!/usr/bin/env bash
+
+shopt -s nullglob globstar
+
+config_file=~/.config/scripts.conf
+get_conf() {
+  if [[ -f $config_file ]]; then
+    cat $config_file | grep "$1" | cut -d ':' -f 2
+  fi
+}
+
+menu=$(get_conf menu_list)
+clipboard=$(get_conf clipboard_copy)
+
+prefix=${PASSWORD_STORE_DIR-~/.password-store}
+password_files=( "$prefix"/**/*.gpg )
+password_files=( "${password_files[@]#"$prefix"/}" )
+password_files=( "${password_files[@]%.gpg}" )
+
+password=$(printf '%s\n' "${password_files[@]}" | "$menu" "$@")
+
+[[ -n $password ]] || exit
+
+pass show -c "$password";
+
+sleep 45
+
+echo "" | "$clipboard"
