@@ -66,7 +66,22 @@ if ! command -v eget &> /dev/null; then
           fi
           ;;
       esac
-      mv eget "$target_dir/eget"
+      local os
+      if [ "$platform" = "linux" ]; then
+        os="linux"
+      elif [ "$platform" = "macos" ]; then
+        os="darwin"
+      elif [ "$platform" = "windows" ]; then
+        os="windows"
+      fi
+      local art
+      if [ "$arch" = "x86_64" ]; then
+        arch="amd64"
+      elif [ "$arch" = "aarch64" ]; then
+        arch="arm64"
+      fi
+      mv "eget-1.3.4-$os_$art" "$target_dir/eget"
+      rm -rf "eget-1.3.4-$os_$art"
       ;;
     *)
       echo "ok i'll not install eget"
@@ -74,52 +89,7 @@ if ! command -v eget &> /dev/null; then
   esac
 fi
 
-# 2. Install asdf
-if ! command -v asdf &> /dev/null; then
-  echo "Will u looks like u don't have asdf installed?"
-  echo "what u wanna do?"
-  read -p "install asdf? (y/n) " yn
-  case $yn in
-    [Yy]*)
-      case $platform in
-        linux)
-          if [ "$arch" = "x86_64" ]; then
-            download_file "https://github.com/asdf-vm/asdf/releases/download/v0.18.0/asdf-v0.18.0-linux-amd64.tar.gz" | tar -xz
-          else
-            download_file "https://github.com/asdf-vm/asdf/releases/download/v0.18.0/asdf-v0.18.0-linux-arm64.tar.gz" | tar -xz
-          fi
-          ;;
-        macos)
-          if [ "$arch" = "x86_64" ]; then
-            download_file "https://github.com/asdf-vm/asdf/releases/download/v0.18.0/asdf-v0.18.0-darwin-amd64.tar.gz" | tar -xz
-          else
-            download_file "https://github.com/asdf-vm/asdf/releases/download/v0.18.0/asdf-v0.18.0-darwin-arm64.tar.gz" | tar -xz
-          fi
-          ;;
-        windows)
-          if [ "$arch" = "x86_64" ]; then
-            echo "sorry windows not supported"
-          else
-            echo "sorry windows not supported"
-          fi
-          ;;
-      esac
-      # Check if asdf file was extracted
-      if [ -f "./asdf" ]; then
-        mv "./asdf" "$target_dir/asdf"
-      elif [ -d "./asdf" ]; then
-        mv "./asdf" "$target_dir/"
-      else
-        echo "Warning: asdf binary/directory not found after extraction"
-      fi
-      ;;
-    *)
-      echo "ok i'll not install asdf"
-      ;;
-  esac
-fi
-
-# 3. Install Rust toolchain
+# 2. Install Rust toolchain
 if ! command -v rustup &> /dev/null; then
   echo -e "Will u looks like u don't have rust installed?\n"
   echo "what u wanna do?"
@@ -134,7 +104,7 @@ if ! command -v rustup &> /dev/null; then
   esac
 fi
 
-# 4. cargo-binstall[] (of the cargo bridge)
+# 3. cargo-binstall[] (of the cargo bridge)
 if ! command -v cargo &> /dev/null; then
   echo "where u installed cargo ?"
   read -p "(default: ~/.cargo/bin/cargo) " cargo_path

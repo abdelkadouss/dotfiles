@@ -65,6 +65,48 @@ local install = function(input, opts)
       end
     end
 
+    if version == "x.x.x" then
+      local curl_handle = io.popen('curl -s ' .. input .. '/releases/latest"')
+      if curl_handle then
+        local response = curl_handle:read("*a")
+        curl_handle:close()
+
+        -- Simple string extraction from JSON
+        local tag = response:match('"tag_name"%s*:%s*"([^"]+)"')
+        if tag then
+          if tag:find("%.") then -- if contains dot
+            if tag:sub(1, 1) == "v" then
+              tag = tag:sub(2)
+            end
+            version = tag
+          end
+        end
+      end
+
+      -- Method 2: Use git tags if available (for development versions)
+      local git_handle = io.popen('git ls-remote --tags "' .. input .. '"  2>/dev/null')
+      if git_handle then
+        local tags_output = git_handle:read("*a")
+        git_handle:close()
+
+        -- Find the latest tag
+        local latest_tag
+        for line in tags_output:gmatch("[^\r\n]+") do
+          local tag = line:match("refs/tags/(v?%d+%.%d+%.%d+)$") or
+              line:match("refs/tags/(v?%d+%.%d+)$")
+          if tag then
+            if tag:sub(1, 1) == "v" then
+              tag = tag:sub(2)
+            end
+            latest_tag = tag
+          end
+        end
+        if latest_tag then
+          version = latest_tag
+        end
+      end
+    end
+
     print("Version:", version)
     return version
   end

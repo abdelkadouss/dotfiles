@@ -4,6 +4,7 @@ mpv
 zathura
 pass # i actually installed it but it's not work!!, see [[utils.kdl]]
 htop
+btop
 gpg
 git # yeah, even it's not exist via mise
 magick # this is the repo but it's conrain only linux builds "ImageMagick/ImageMagick" // a tool to convert images and work with them

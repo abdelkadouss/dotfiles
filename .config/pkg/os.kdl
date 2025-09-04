@@ -1,0 +1,5 @@
+cargo {
+  notify "toastify" // a cli tool to send notifications
+  kanata "kanata" crate=#true features="cmd" 
+
+}

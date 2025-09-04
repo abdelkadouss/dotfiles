@@ -15,3 +15,7 @@ cargo {
   hyperfine // a benchmarking tool
   mise
 }
+
+go {
+  new "github.com/yarlson/cutr@latest" // make new projects from templates insha'Allah
+}
