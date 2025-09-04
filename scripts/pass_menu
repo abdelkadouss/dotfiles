@@ -13,7 +13,7 @@ menu=$(get_conf menu_list)
 clipboard=$(get_conf clipboard_copy)
 
 prefix=${PASSWORD_STORE_DIR-~/.password-store}
-password_files=( "$prefix"/**/*.gpg )
+password_files=( "$prefix"/**/*.gpg "$prefix"/**/**/*.gpg )
 password_files=( "${password_files[@]#"$prefix"/}" )
 password_files=( "${password_files[@]%.gpg}" )
 
@@ -21,7 +21,11 @@ password=$(printf '%s\n' "${password_files[@]}" | "$menu" "$@")
 
 [[ -n $password ]] || exit
 
-pass show -c "$password";
+if [[ -n $1 ]]; then
+  pass show "$password" | grep "email:" | cut -d ':' -f 2 | "$clipboard"
+elif [[ $1 == "mail" ]]; then
+  pass show -c "$password";
+fi
 
 sleep 45
 
