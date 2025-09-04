@@ -5,6 +5,7 @@
 )
 
 (defsrc
+  esc
   grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
   tab  q    w    e    r    t    y    u    i    o    p    [    ]    \
   caps a    s    d    f    g    h    j    k    l    ;    '    ret
@@ -39,6 +40,7 @@
 )
 
 (deflayer base 
+  grv
   grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
   tab  q    w    e    r    t    y    u    i    o    p    [    ]    \
 @escctrl a  s    d    f    g    h    j    k    l    ;    '    ret
@@ -47,6 +49,7 @@
 )
 
 (deflayer mods
+  _
   (multi spc grv) (multi spc 1) (multi spc 2) (multi spc 3) (multi spc 4) (multi spc 5) (multi spc 6) (multi spc 7) (multi spc 8) (multi spc 9) (multi spc 0) (multi spc -) (multi spc =) (multi spc bspc)
   (multi spc tab)  (multi spc q) (multi spc w) (multi spc e) (multi spc r) (multi spc t) (multi spc y) (multi spc u) (multi spc i) (multi spc o) (multi spc p) (multi spc [) (multi spc ]) (multi spc \)
 @escctrl (multi spc a) @s @d @f (multi spc g) (multi spc h) @j @k @l (multi spc ;) (multi spc ')    (multi spc ret)
@@ -55,6 +58,7 @@
 )
 
 (deflayer lesc
+  _
   grv  C-1  C-2  C-3  C-4  C-5  C-6  C-7  C-8  C-9  C-0  C--  C-=  C-bspc
 C-tab  C-q  C-w  C-e  C-r  C-t  C-y  C-u  C-i  C-o  C-p  C-[  C-]  C-\
 C-esc  C-a  C-s  C-d  C-f  C-g  ◀    ▼    ▲    ▶    C-;  C-'  C-ret
@@ -63,6 +67,7 @@ C-esc  C-a  C-s  C-d  C-f  C-g  ◀    ▼    ▲    ▶    C-;  C-'  C-ret
 )
 
 (deflayer lalt
+  _
   grv  A-1  A-2  A-3  A-4  A-5  A-6  A-7  A-8  A-9  A-0  A--  A-=  A-bspc
 A-tab  A-q  A-w  A-e  A-r  A-t  A-y  A-u  A-i  A-o  A-p  A-[  A-]  A-\
 A-esc  A-a  lctl lmet lalt A-g  A-h  A-j  A-k  A-l  A-;  A-'  A-ret
@@ -71,6 +76,7 @@ A-esc  A-a  lctl lmet lalt A-g  A-h  A-j  A-k  A-l  A-;  A-'  A-ret
 )
 
 (deflayer ralt
+  _
   grv  A-1  A-2  A-3  A-4  A-5  A-6  A-7  A-8  A-9  A-0  A--  A-=  A-bspc
 A-tab  A-q  A-w  A-e  A-r  A-t  A-y  A-u  A-i  A-o  A-p  A-[  A-]  A-\
 A-esc  A-a  A-s  A-d  A-f  A-g  A-h  ralt rmet rctl A-;  A-'  A-ret
@@ -79,6 +85,7 @@ A-esc  A-a  A-s  A-d  A-f  A-g  A-h  ralt rmet rctl A-;  A-'  A-ret
 )
 
 (deflayer rctrl
+  _
   grv RC-1 RC-2 RC-3 RC-4 RC-5 RC-6 RC-7 RC-8 RC-9 RC-0 RC--  RC-= RC-bspc
 RC-tab RC-q RC-w RC-e RC-r RC-t RC-y RC-u RC-i RC-o RC-p RC-[ RC-] RC-\
 RC-esc RC-a RC-s RC-d RC-f RC-g RC-h ralt rmet rctl RC-; RC-' RC-ret
@@ -87,6 +94,7 @@ RC-esc RC-a RC-s RC-d RC-f RC-g RC-h ralt rmet rctl RC-; RC-' RC-ret
 )
 
 (deflayer lmet
+  _
   grv  M-1  M-2  M-3  M-4  M-5  M-6  M-7  M-8  M-9  M-0  M--  M-=  M-bspc
 M-tab  M-q  M-w  M-e  M-r  M-t  M-y  M-u  M-i  M-o  M-p  M-[  M-]  M-\
 M-esc  M-a  rctl lmet ralt M-g  M-h  M-j  M-k  M-l  M-;  M-'  M-ret
@@ -95,6 +103,7 @@ M-esc  M-a  rctl lmet ralt M-g  M-h  M-j  M-k  M-l  M-;  M-'  M-ret
 )
 
 (deflayer rmet
+  _
   grv  M-1  M-2  M-3  M-4  M-5  M-6  M-7  M-8  M-9  M-0  M--  M-=  M-bspc
 M-tab  M-q  M-w  M-e  M-r  M-t  M-y  M-u  M-i  M-o  M-p  M-[  M-]  M-\
 M-esc  M-a  M-s  M-d  M-f  M-g  M-h  ralt rmet rctl M-;  M-'  M-ret
