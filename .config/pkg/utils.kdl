@@ -26,7 +26,3 @@ cargo {
   binwalk // a tool to check the binary (good for checking if there malware)
   neda "neda-cli"
 }
-
-go {
-  tsk "github.com/yarlson/tsk@latest" // The Task Manager for People Who Hate Task Managers
-}
