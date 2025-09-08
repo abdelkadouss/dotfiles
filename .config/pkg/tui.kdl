@@ -9,6 +9,8 @@ eget {
   lazygit "jesseduffield/lazygit" // a git tui
   lazydocker "jesseduffield/lazydocker" // a docker tui
   // posting "darrenburns/posting" // an http client // FIXME: no build in github need nu to install
+
+  flx "itome/flx" // flutter devtools bu tui
 }
 
 cargo {
