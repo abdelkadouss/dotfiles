@@ -14,8 +14,8 @@
 )
 
 (defvar
-  tap-time 300
-  hold-time 300
+  tap-time 1000
+  hold-time 1000
 )
 
 (deffakekeys
