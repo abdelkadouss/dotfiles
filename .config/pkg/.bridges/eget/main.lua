@@ -184,7 +184,9 @@ local install = function(input, opts)
 
 
     path = path .. "out"
-    path = path .. "/" .. opts.target or path
+    if opts.target then
+      path = path .. "/" .. opts.target
+    end
 
     entry_point = path .. "/" .. opts.entry_point
     if not entry_point then

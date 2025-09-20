@@ -3,12 +3,17 @@ cargo {
   nu // a new type of package manager, NOTE: i put this here because it's important
   kdlfmt // format kdl files
   rustywind // a tailwind css rust lsp
+  topiary "topiary-cli" // universal code formatter
   fish "https://github.com/fish-shell/fish-shell" git=#true // fish shell, NOTE: i put this here because i use it for the shell completion in my nushell config
   dx "dioxus-cli"
+  pkgx // a version manager
+  //rustowl // Visualize Ownership in Rust
 }
 
 eget {
   d2 "terrastruct/d2" // diagram as code compiler
   sqlc "sqlc-dev/sqlc" asset="tar.gz" // sql compiler
   moon "moonrepo/moon" // a projects manager
+  uv "astral-sh/uv" // a python pm
+  pkgm "pkgxdev/pkgm" // a pm to install the pkgx pkgs in the local machine
 }

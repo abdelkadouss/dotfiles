@@ -5,8 +5,8 @@ eget {
 
 cargo {
   viu // tool to visualize images in the terminal
-  asciinema "https://github.com/asciinema/asciinema" git=#true// a tool to record terminal videos (gifs)
+  asciinema "https://github.com/asciinema/asciinema" git=#true // a tool to record terminal videos (gifs)
   mdbook // a tool to make a book from markdown
-  delta git-delta
-  resvg
+  delta git-delta // a git pager
+  resvg // a tool to convert svgs (used -also- by yazi to view the svgs)
 }

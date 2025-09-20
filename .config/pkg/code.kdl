@@ -13,7 +13,7 @@ cargo {
   zellij // terminal multiplexer
   //rusty-man // the man cli but for rust crates
   hyperfine // a benchmarking tool
-  mise
+  mise // a version manager
 }
 
 go {

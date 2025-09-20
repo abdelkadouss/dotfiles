@@ -7,6 +7,8 @@ eget {
   // axel "axel-download-accelerator/axel" // FIXME:
 
   yazi "sxyazi/yazi" // a file manager
+  sops "getsops/sops" asset="^.json" // simple encrypted files editor
+  age "FiloSottile/age" keep_structure=#true entry_point="age" // an encryption tool (like gpg), but more simpler and modern
 }
 
 cargo {
