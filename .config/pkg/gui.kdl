@@ -5,5 +5,5 @@ eget {
 
 cargo {
   neovide // gui for neovim
-  alacritty "https://github.com/alacritty/alacritty.git" git=#true // a terminal emulator
+  alacritty "https://github.com/alacritty/alacritty.git" method="git" // a terminal emulator
 }

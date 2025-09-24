@@ -1,0 +1,11 @@
+alias n := new
+alias t := test
+
+_default:
+    @just --list
+
+new:
+    @echo todo
+
+test path:
+    nu ./.test/{{ path }}.nu

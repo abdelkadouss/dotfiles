@@ -1,0 +1,14 @@
+#!/usr/bin/env -S pkgx --quiet +nushell.sh nu@0.107.0
+
+def main [ operation: string, input: string ] {
+  use install.nu;
+  if $operation == "install"  {
+    return ( install $input )
+
+  } else {
+    print -e "__IMPL_DEFAULT"
+    exit 1
+
+  } | return $in;
+
+}
