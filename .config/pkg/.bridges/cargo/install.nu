@@ -47,9 +47,6 @@ export def main [ input: string ] {
             { "--tag": [ $env.tag? ] }
             { "--rev": [ $env.rev? ] }
           ]
-          [
-            { "--features": [ $env.features? ] }
-          ]
         ]
       )
 
@@ -60,7 +57,26 @@ export def main [ input: string ] {
     }
     null => {
       $install_cmd ++= [ binstall ]
+    }
+    _ => {
+      panic $"method must be one of git, crate. ($env.method) not supported"
 
+    }
+
+  }
+
+  push if exist --pass-value --allow-empty $install_cmd [
+    [
+      { "--features": [ $env.features? ] }
+    ]
+  ]
+
+  if (
+    $env.method?
+    | (
+      ( $in == "crate") or ( $in == null )
+    )
+  ) {
       if ( $env.version? | is-not-empty ) {
         $install_cmd ++= [
           "--version",
@@ -68,12 +84,6 @@ export def main [ input: string ] {
         ]
 
       }
-
-    }
-    _ => {
-      panic $"method must be one of git, crate. ($env.method) not supported"
-
-    }
 
   }
 

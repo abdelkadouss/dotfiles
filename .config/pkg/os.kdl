@@ -1,5 +1,5 @@
 cargo {
   notify "toastify" // a cli tool to send notifications
-  kanata "kanata" method="crate" features="cmd" // a keyboard remapper
+  kanata "kanata" method="crate" features="cmd" version="1.9.0" // a keyboard remapper
 
 }
