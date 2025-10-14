@@ -8,6 +8,7 @@ cargo {
   dx "dioxus-cli"
   pkgx // a version manager
   //rustowl // Visualize Ownership in Rust
+  rustlings // small exercises to get you used to reading and writing Rust code
 }
 
 eget {
