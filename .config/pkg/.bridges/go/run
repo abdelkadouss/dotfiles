@@ -1,9 +1,8 @@
 #!/usr/bin/env -S pkgx --quiet +nushell.sh nu@0.107.0
 
 def main [ operation: string, input: string ] {
-  use install.nu;
   if $operation == "install"  {
-    return ( pkgx lua ./main.lua $input )
+    return ( pkgx lua ~/.config/pkg/.bridges/go/main.lua $input )
 
   } else {
     print -e "__IMPL_DEFAULT"

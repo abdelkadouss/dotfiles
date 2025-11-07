@@ -7,6 +7,8 @@ eget {
   direnv "direnv/direnv" // a tool to manage your environment
 
   gh "cli/cli" // github cli
+
+  compose-generator "compose-generator/compose-generator" // a tool to generate Docker Compose configurations
 }
 
 cargo {

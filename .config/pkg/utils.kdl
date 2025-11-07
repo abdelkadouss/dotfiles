@@ -13,6 +13,9 @@ eget {
 
 
   exercism "exercism/cli" file="exercism" // a programming exercise
+
+  gotty "yudai/gotty" asset="amd64" // Share your terminal over the web
+
 }
 
 cargo {
@@ -25,5 +28,6 @@ cargo {
   tokei // a tool to count your code
   //tldr "tlrc" // cheatsheets
   binwalk // a tool to check the binary (good for checking if there malware)
-  neda "neda-cli"
+  neda "neda-cli" // an prayer times reminder
+  faker "faker-cli" // a tool to generate fake data
 }

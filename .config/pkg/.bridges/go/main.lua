@@ -24,7 +24,6 @@ local install = function(input, opts)
 
   -- Run the installation command
   local full_cmd = table.concat(cmd, " ")
-  print("Running:", full_cmd)
 
   local env_cmd = "GOPATH=" .. gopath .. " GOBIN=" .. gobin .. " " .. full_cmd
   local handle = io.popen(env_cmd .. " 2>>" .. opts.log_file .. " 1>>" .. opts.log_file)
@@ -37,7 +36,6 @@ local install = function(input, opts)
 
   local output = handle:read("*a")
   handle:close()
-  print("output: " .. output)
 
   -- Get version information
   local get_version = function()
@@ -133,7 +131,6 @@ local install = function(input, opts)
     if debug_handle then
       local debug_output = debug_handle:read("*a")
       debug_handle:close()
-      print("DEBUG - Contents of bin directory: " .. debug_output)
     end
 
     return {
@@ -148,8 +145,6 @@ local install = function(input, opts)
 
   local version = get_version()
 
-  print("Executable path:", executable_path)
-  print("Version:", version)
 
   -- Verify the executable actually exists
   local check_exists = io.popen("test -f '" .. executable_path .. "' && echo exists")
@@ -168,4 +163,16 @@ local install = function(input, opts)
   }
 end
 
-return { install = install }
+-- get the first argument
+local input = arg[1]
+
+local pkg = install(input, {
+  log_file = "/var/log/pkg/go.log"
+})
+
+if pkg.error then
+  print(pkg.error)
+  os.exit(1)
+end
+
+print(pkg.path .. ',' .. pkg.version)
