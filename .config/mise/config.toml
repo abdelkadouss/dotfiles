@@ -1,6 +1,6 @@
 [tools]
-dart = "latest"
-flutter = "latest"
+# dart = "latest"
+# flutter = "latest"
 bun = "latest"
 go = "latest"
 java = "18" # NOTE: this should be before the android-sdk because it's a dependency
