@@ -1,0 +1,38 @@
+(defcfg
+  process-unmapped-keys yes
+  concurrent-tap-hold yes
+)
+
+(defsrc
+  grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
+  tab  q    w    e    r    t    y    u    i    o    p    [    ]    \
+  caps a    s    d    f    g    h    j    k    l    ;    '    ret
+  lsft z    x    c    v    b    n    m    ,    .    /    rsft
+                              spc
+)
+
+(defvar
+  tap-time 300
+  hold-time 300
+)
+
+(defalias
+  to-esc (layer-toggle lesc)
+  escctrl (tap-hold-press $tap-time $hold-time esc @to-esc) 
+)
+
+(deflayer base 
+  grv  1    2    3    4    5    6    7    8    9    0    -    =    bspc
+  tab  q    w    e    r    t    y    u    i    o    p    [    ]    \
+@escctrl a  s    d    f    g    h    j    k    l    ;    '    ret
+  lsft z    x    c    v    b    n    m    ,    .    /    rsft
+                             spc
+)
+
+(deflayer lesc
+  grv  C-1  C-2  C-3  C-4  C-5  C-6  C-7  C-8  C-9  C-0  C--  C-=  C-bspc
+C-tab  C-q  C-w  C-e  C-r  C-t  C-y  C-u  C-i  C-o  C-p  C-[  C-]  C-\
+C-esc  C-a  C-s  C-d  C-f  C-g  ◀    ▼    ▲    ▶    C-;  C-'  C-ret
+  lsft C-z  C-x  C-c  C-v  C-b  C-n  C-m  C-,  C-.  C-/    rsft
+                            C-spc
+)
