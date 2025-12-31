@@ -11,10 +11,14 @@ eget {
   // posting "darrenburns/posting" // an http client // FIXME: no build in github need nu to install
 
   flx "itome/flx" // flutter devtools bu tui
+  dcv "tokuhirom/dcv" // a tui for docker compose
+  lazyssh "Adembc/lazyssh" // a ssh tui
 }
 
 cargo {
   mp "mprocs" // a tool to manage multiple processes
   rainfrog // a DBs viewer
   //wiki-tui // a tui for wikis
+
+  basalt "basalt-tui" // a tui for obsidian
 }

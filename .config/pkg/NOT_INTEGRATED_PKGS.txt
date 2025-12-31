@@ -4,7 +4,7 @@ mpv
 zathura
 htop
 btop
-posting # the repo "darrenburns/posting", it's only available via the 'uv' python package manager (so it's need an nu bridge but i don't wanna write one for it)
+posting # the repo "darrenburns/posting", it's only available via the 'uv' python package manager (so it's need an nv bridge but i don't wanna write one for it)
 
 # guis (mac only issue)
 kitty

@@ -1,6 +1,6 @@
 // this is a list of the runtimes, compilers, lsp... that are not exist in mise or only available via the repo or a cargo or a url
 cargo {
-  nu // a new type of package manager, NOTE: i put this here because it's important
+  nu // feature="mcp" // a new type of package manager, NOTE: i put this here because it's important
   kdlfmt // format kdl files
   rustywind // a tailwind css rust lsp
   topiary "topiary-cli" // universal code formatter
@@ -9,6 +9,7 @@ cargo {
   pkgx // a version manager
   //rustowl // Visualize Ownership in Rust
   rustlings // small exercises to get you used to reading and writing Rust code
+  mise // a version manager
 }
 
 eget {
@@ -17,4 +18,12 @@ eget {
   moon "moonrepo/moon" // a projects manager
   uv "astral-sh/uv" // a python pm
   pkgm "pkgxdev/pkgm" // a pm to install the pkgx pkgs in the local machine
+  fvm "leoafarias/fvm" // a version manager for flutter
+  docker-compose "docker/compose" asset="^.json" // Define and run multi-container applications with Docker
+  docker-buildx "docker/buildx" asset="^.json" // Docker CLI plugin for extended build capabilities with BuildKit
+  bun "oven-sh/bun" asset="^profile" // a fast js run time
 }
+
+// go {
+  // docker "github.com/docker/cli/cli@latest" // the docker cli
+// }
