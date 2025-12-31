@@ -1,14 +1,18 @@
-# new 🌟:
-# add ✨:
-# fix 🩹:
-# remove 🗑:
-# deploy 🚀:
-# merge 🔀:
-# change 🔄:
-# move 🚚:
-# ci ⚙️:
-# clean up 🧹:
-# test 🧪:
+# fix 🩹 ():
+# remove 🗑 ():
+# deploy 🚀 ():
+# merge 🔀 ():
+# change 🔄 ():
+# move 🚚 ():
+# ci ⚙️():
+# clean up 🧹 ():
+# test 🧪 ():
 # new release 🎉 (v..):
-# update 📝:
-# improve 🔥:
+# improve 🔥 ():
+# refactor 🔨 ():
+# doc 📚:
+# feature ✨ ():
+# note 📝 ():
+# dependency 🧱:
+
+# FORMAT : <acion> <emoje> (<related modules[seperated by comma]>): <descrtion>
