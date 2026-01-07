@@ -30,4 +30,5 @@ cargo {
   binwalk // a tool to check the binary (good for checking if there malware)
   neda "neda-cli" // an prayer times reminder
   faker "faker-cli" // a tool to generate fake data
+  gen-license // a tool to generate the open licenses
 }
