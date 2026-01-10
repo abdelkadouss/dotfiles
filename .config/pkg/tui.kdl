@@ -20,5 +20,6 @@ cargo {
   rainfrog // a DBs viewer
   //wiki-tui // a tui for wikis
 
-  basalt "basalt-tui" // a tui for obsidian
+  obs "basalt-tui" // a tui for obsidian
+  tgt "tgt" method="crate" // a telegram tui // NOTE: the binstall version is broken
 }

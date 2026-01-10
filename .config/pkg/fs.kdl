@@ -8,7 +8,7 @@ eget {
 
   yazi "sxyazi/yazi" // a file manager
   sops "getsops/sops" asset="^.json" // simple encrypted files editor
-  age "FiloSottile/age" keep_structure=#true target="*" entry_point="age" // an encryption tool (like gpg), but more simpler and modern
+  age "FiloSottile/age" keep_structure=#true target="*" entry_point="age" asset="^.tar.gz." // an encryption tool (like gpg), but more simpler and modern
 
   croc "schollz/croc" // Easily and securely send things from one computer to another. and BTW this is an andoird client (https://github.com/howeyc/crocgui.git)
 }

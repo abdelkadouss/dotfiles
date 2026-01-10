@@ -2,12 +2,14 @@
 cargo {
   nu // feature="mcp" // a new type of package manager, NOTE: i put this here because it's important
   kdlfmt // format kdl files
+  kdl-fmt "https://github.com/dj95/kdl-fmt" method="git" // another kdl formatter
+  kdl-lsp "https://github.com/heufel/kdl-lsp-standalone.git" method="git" // a kdl lsp
   rustywind // a tailwind css rust lsp
   topiary "topiary-cli" // universal code formatter
   fish "https://github.com/fish-shell/fish-shell" method="git" // fish shell, NOTE: i put this here because i use it for the shell completion in my nushell config
   dx "dioxus-cli"
   pkgx // a version manager
-  //rustowl // Visualize Ownership in Rust
+  // rustowl "rustowl" target-dir="bin" target="rustowl" // Visualize Ownership in Rust // FIXME: this issue is pkg gonna insha'Allah link only one exec but there is two
   rustlings // small exercises to get you used to reading and writing Rust code
   mise // a version manager
 }
@@ -22,6 +24,7 @@ eget {
   docker-compose "docker/compose" asset="^.json" // Define and run multi-container applications with Docker
   docker-buildx "docker/buildx" asset="^.json" // Docker CLI plugin for extended build capabilities with BuildKit
   bun "oven-sh/bun" asset="^profile" // a fast js run time
+  kdlc "osjupiter/kdlc" // A fast and efficient tool to convert KDL (KDL Document Language) files to JSON
 }
 
 // go {

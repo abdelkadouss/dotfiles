@@ -31,4 +31,5 @@ cargo {
   neda "neda-cli" // an prayer times reminder
   faker "faker-cli" // a tool to generate fake data
   gen-license // a tool to generate the open licenses
+  gen-completions // Generate shell completions from manpages or KDL/JSON/YAML
 }
