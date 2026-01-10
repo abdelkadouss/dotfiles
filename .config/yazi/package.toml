@@ -1,17 +1,34 @@
 [[plugin.deps]]
 use = "yazi-rs/plugins:git"
-rev = "1ab21d4"
-hash = "63b6c222bf2103b3023389dde5e2ecfe"
+rev = "68f7d48"
+hash = "eb301feb9e125adf5aa4f59f2aa54e44"
 
 [[plugin.deps]]
 use = "yazi-rs/plugins:full-border"
-rev = "1ab21d4"
+rev = "68f7d48"
 hash = "3996fc74044bc44144b323686f887e1"
 
 [[plugin.deps]]
 use = "yazi-rs/plugins:jump-to-char"
-rev = "1ab21d4"
-hash = "d2f04875bbd4ed3dd5696e8c4b094fde"
+rev = "68f7d48"
+hash = "ce67445ebb1bf3d97b8e44f50904b2c5"
 
-[flavor]
-deps = []
+[[plugin.deps]]
+use = "Tyarel8/nu"
+rev = "99215a2"
+hash = "cceeff05a4970b6f02df41dd16c69cdc"
+
+[[flavor.deps]]
+use = "yazi-rs/flavors:catppuccin-mocha"
+rev = "4a1802a"
+hash = "8d7799e4598ff079fa5ee5c770d9bc08"
+
+[[flavor.deps]]
+use = "BennyOe/tokyo-night"
+rev = "8e6296f"
+hash = "f9adc0d1e58cbcfc5f39046383a25d9f"
+
+[[flavor.deps]]
+use = "Mintass/rose-pine"
+rev = "8343340"
+hash = "e2336631865c0f90276dcbc553d532fc"

@@ -1,6 +1,6 @@
 [opener]
 play_sound = [
-	{ run = 'wezterm start mpv --no-video "$@"', orphan = true, for = "unix" },
+	{ run = 'alacritty mpv --no-video "$@"', orphan = true, for = "unix" },
 ]
 view_document = [
 	{ run = 'zathura "$@"', orphan = true, for = "unix" },
@@ -28,11 +28,11 @@ prepend_rules = [
 
 # prefetch
 [[plugin.prepend_fetchers]]
-id   = "git"
-name = "*"
-run  = "git"
+id  = "git"
+url = "*"
+run = "git"
 
 [[plugin.prepend_fetchers]]
-id   = "git"
-name = "*/"
-run  = "git"
+id  = "git"
+url = "*/"
+run = "git"
