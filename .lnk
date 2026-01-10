@@ -9,6 +9,7 @@
 .config/nushell
 .config/nvim
 .config/pkg
+.config/qutebrowser
 .config/starship.toml
 .config/yazi
 .config/zellij
