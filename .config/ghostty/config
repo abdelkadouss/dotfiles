@@ -2,7 +2,7 @@
 # background = #11111b
 # background = #181825
 background = #000000
-theme = catppuccin-mocha
+# theme = catppuccin-mocha
 # theme = tokyonight_night
 
 # font
@@ -58,3 +58,5 @@ keybind = super+alt+p=write_scrollback_file:paste
 keybind = super+alt+d=new_split:down
 keybind = super+alt+r=new_split:right
 keybind = super+alt+k=clear_screen
+
+config-file = ~/.local/share/nushell/gen/theme_change_hook_for_ghostty
