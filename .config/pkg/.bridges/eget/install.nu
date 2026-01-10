@@ -10,8 +10,11 @@ use ../.shared/version [
 ];
 
 const VERSION_FALLBACK = 'x.x.x'
+const EGET_SECRET_FILE_PATH = '~/.env/eget/github_token'
 
 export def main [input: string] {
+  let config: record = ( try { open ./config.nuon } );
+
   mkdir out
 
   mut install_cmd = [
@@ -40,10 +43,20 @@ export def main [input: string] {
 
   $install_cmd ++= $opts
   $install_cmd ++= [ $input ]
+  let install_cmd = $install_cmd;
 
   try {
-    run-external $install_cmd
-    | print -e $in
+    with-env {
+      EGET_GITHUB_TOKEN: (
+        if ( $config.use_authorised_install? | default false ) {
+          open ( $EGET_SECRET_FILE_PATH | path expand )
+        }
+      )
+    } {
+      run-external $install_cmd
+      | print -e $in
+
+    }
 
   } catch {|err|
     print $err.rendered

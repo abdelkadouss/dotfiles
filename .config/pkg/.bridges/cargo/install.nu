@@ -132,10 +132,37 @@ export def main [ input: string ] {
   )
 
   let path = (
-    fs find exec ./out/bin/
-    | first
+    try {
+      [
+        ./out
+        $env.target-dir
+      ] | path join
+      | path expand
+    } catch {
+      fs find exec ./out/bin/
+      | first
+    }
   )
 
-  return ( pkg new $path $version )
+  return (
+    pkg new $path $version (
+      try {
+        $env.target-dir; # if target-dir is set then
+        try {
+          (
+            [
+              $path
+              $env.target
+            ] | path join
+          ) | path expand
+        } catch {||
+          fs find exec ./out/bin/
+          | first
+        }
+      } catch {||
+        null
+      }
+    )
+  )
 
 }
