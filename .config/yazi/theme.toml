@@ -1,6 +1,6 @@
 [flavor]
-use = "rose-pine"
-dark = "rose-pine"
+use = "catppuccin-mocha"
+dark = "catppuccin-mocha"
 
 [[icon.files]]
 name = ".babelrc"

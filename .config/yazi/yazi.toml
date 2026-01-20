@@ -14,15 +14,15 @@ view_svg = [
 # ...
 [open]
 prepend_rules = [
-	{ name = "*.mp3", use = "play_sound" },
-	{ name = "*.pdf", use = "view_document" },
-  { name = "*.png", use = "view_image" },
-  { name = "*.jpg", use = "view_image" },
-  { name = "*.jpeg", use = "view_image" },
-  { name = "*.gif", use = "view_image" },
-  { name = "*.svg", use = "view_svg" },
-  { name = "*.webp", use = "view_image" },
-  { name = "*.avi", use = "view_image" },
+	{ url = "*.mp3", use = "play_sound" },
+	{ url = "*.pdf", use = "view_document" },
+  { url = "*.png", use = "view_image" },
+  { url = "*.jpg", use = "view_image" },
+  { url = "*.jpeg", use = "view_image" },
+  { url = "*.gif", use = "view_image" },
+  { url = "*.svg", use = "view_svg" },
+  { url = "*.webp", use = "view_image" },
+  { url = "*.avi", use = "view_image" },
 ]
 
 
