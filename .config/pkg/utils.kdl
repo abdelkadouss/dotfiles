@@ -6,7 +6,9 @@ eget {
   carapace "carapace-sh/carapace-bin" file="carapace" // a shell completions generator
 
   ollama "ollama/ollama" asset="^.tgz" // a tool to manage the ai models
+  mods "charmbracelet/mods" asset="^tar.gz." // ai tool wokrs like this insha'Allah: $ http get <url> | mods -f "explane this for me"
   yq "mikefarah/yq" asset="tar.gz" file="yq_*" // a tool to parse YAML, JSON, XML, CSV, TOML files from cli // NOTE: this one is a dep for install the android-sdk via mise
+  // mq "harehare/mq" asset="^mq-dbg-* ^mq-lsp-* ^mqcr-*" // jq-like command-line tool for markdown processing
 
   //pass "https://git.zx2c4.com/password-store/snapshot/password-store-master.tar.xz" keep_structure=#true after_hook="cd out; make install DESTDIR=out PREFIX=''" target="out" entry_point="bin/pass" // it's broken
   pass "gopasspw/gopass" asset="^.json" // a tool to manage the passwords (reimplementation of  the c base pass)
@@ -15,7 +17,6 @@ eget {
   exercism "exercism/cli" file="exercism" // a programming exercise
 
   gotty "yudai/gotty" asset="amd64" // Share your terminal over the web
-
 }
 
 cargo {

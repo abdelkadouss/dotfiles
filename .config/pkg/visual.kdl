@@ -1,12 +1,16 @@
 eget {
   vhs "charmbracelet/vhs" asset="^.tar.gz." // Your CLI home video recorder 📼 
+  // ttyd "tsl0922/ttyd" // a dependency for vhs
   glow "charmbracelet/glow" asset="^.tar.gz." // a terminal based markdown viewer
+  freeze "charmbracelet/freeze" asset="^.tar.gz." // Generate images of code and terminal output 📸
 }
 
 cargo {
   viu // tool to visualize images in the terminal
+  vi "https://github.com/monomadic/iv.git" method="git" // an image viewer
   asciinema "https://github.com/asciinema/asciinema" method="git" // a tool to record terminal videos (gifs)
+  agg "https://github.com/asciinema/agg" method="git" // make gifs from asciicasts insha'Allah
   mdbook // a tool to make a book from markdown
-  delta git-delta // a git pager
+  delta "git-delta" // a git pager
   resvg // a tool to convert svgs (used -also- by yazi to view the svgs)
 }

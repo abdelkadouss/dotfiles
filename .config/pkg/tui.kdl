@@ -13,6 +13,9 @@ eget {
   flx "itome/flx" // flutter devtools bu tui
   dcv "tokuhirom/dcv" // a tui for docker compose
   lazyssh "Adembc/lazyssh" // a ssh tui
+
+  snitch "karol-broda/snitch" // a prettier way to inspect network connections
+  pomo "Bahaaio/pomo" // Pomodoro timer with ASCII art, progress bar, and desktop notifications.
 }
 
 cargo {

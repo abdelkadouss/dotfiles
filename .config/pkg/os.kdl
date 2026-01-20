@@ -1,5 +1,8 @@
 cargo {
   notify "toastify" // a cli tool to send notifications
-  kanata "kanata" method="crate" features="cmd" version="1.9.0" // a keyboard remapper
+  // kanata "kanata" method="crate" features="cmd" version="1.9.0" // a keyboard remapper // NOTE: this is debrkated, switch to keymapper
+}
 
+eget {
+  keymapper "houmain/keymapper" // A cross-platform context-aware key remapper.
 }

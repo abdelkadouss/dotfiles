@@ -1,9 +1,11 @@
 // this is a list of the runtimes, compilers, lsp... that are not exist in mise or only available via the repo or a cargo or a url
 cargo {
   nu // feature="mcp" // a new type of package manager, NOTE: i put this here because it's important
+  nu-lint // a linter for nushell
   kdlfmt // format kdl files
   kdl-fmt "https://github.com/dj95/kdl-fmt" method="git" // another kdl formatter
   kdl-lsp "https://github.com/heufel/kdl-lsp-standalone.git" method="git" // a kdl lsp
+  lspmux // share one language server instance between multiple LSP clients to save resources
   rustywind // a tailwind css rust lsp
   topiary "topiary-cli" // universal code formatter
   fish "https://github.com/fish-shell/fish-shell" method="git" // fish shell, NOTE: i put this here because i use it for the shell completion in my nushell config
@@ -12,6 +14,7 @@ cargo {
   // rustowl "rustowl" target-dir="bin" target="rustowl" // Visualize Ownership in Rust // FIXME: this issue is pkg gonna insha'Allah link only one exec but there is two
   rustlings // small exercises to get you used to reading and writing Rust code
   mise // a version manager
+  // nu-fmt "https://github.com/nushell/nufmt" method="git" // a formatter for nushell // this formatter not working and danger
 }
 
 eget {
