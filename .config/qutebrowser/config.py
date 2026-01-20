@@ -166,6 +166,15 @@ config.set('content.local_content_can_access_remote_urls', True, 'file:///Users/
 # Type: Bool
 config.set('content.local_content_can_access_file_urls', False, 'file:///Users/abdelkadous/Library/Application%20Support/qutebrowser/userscripts/*')
 
+# Editor (and arguments) to use for the `edit-*` commands. The following
+# placeholders are defined:  * `{file}`: Filename of the file to be
+# edited. * `{line}`: Line in which the caret is found in the text. *
+# `{column}`: Column in which the caret is found in the text. *
+# `{line0}`: Same as `{line}`, but starting from index 0. * `{column0}`:
+# Same as `{column}`, but starting from index 0.
+# Type: ShellCommand
+c.editor.command = ['neovide', '{file}']
+
 # Enable smooth scrolling for web pages. Note smooth scrolling does not
 # work with the `:scroll-px` command.
 # Type: Bool
@@ -217,4 +226,7 @@ c.fonts.default_size = '15pt'
 
 # Bindings for normal mode
 config.unbind('d')
+config.bind('ge', 'edit-url')
 config.bind('gv', 'spawn /opt/homebrew/bin/mpv {clipboard}')
+config.bind('pg', 'open -t github.com/{clipboard}')
+config.bind('po', 'open -t {clipboard}')
