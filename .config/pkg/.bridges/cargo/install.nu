@@ -2,18 +2,18 @@ use ../.shared/push_if_exist.nu 'push if exist'
 use ../.shared/fs 'fs find exec';
 use ../.shared/pkg 'pkg new';
 use ../.shared/version [
-'version via-git-remote-tags',
-'version via-github-tags'
-# 'version via-cli'
-'version trim'
+  'version via-git-remote-tags'
+  'version via-github-tags'
+  # 'version via-cli'
+  'version trim'
 ];
 
-def get_version_via_cargo_info []: string -> string {
+def get_version_via_cargo_info [ ]: string -> string {
   let crate = $in;
 
   cargo info $crate
   | lines
-  | where {|line|
+  | where { |line|
     $line
     | str starts-with version:
   }
@@ -24,7 +24,7 @@ def get_version_via_cargo_info []: string -> string {
 }
 
 export def main [ input: string ] {
-  mkdir  out;
+  mkdir out;
 
   mut install_cmd = [
     # pkgx
@@ -68,22 +68,23 @@ export def main [ input: string ] {
   push if exist --pass-value --allow-empty $install_cmd [
     [
       { "--features": [ $env.features? ] }
+      { "--locked": [ $env.locked? ] }
     ]
   ]
 
   if (
     $env.method?
     | (
-      ( $in == "crate") or ( $in == null )
+      ($in == "crate") or ($in == null)
     )
   ) {
-      if ( $env.version? | is-not-empty ) {
-        $install_cmd ++= [
-          "--version",
-          $env.version
-        ]
+    if ($env.version? | is-not-empty) {
+      $install_cmd ++= [
+        "--version"
+        $env.version
+      ]
 
-      }
+    }
 
   }
 
@@ -98,7 +99,7 @@ export def main [ input: string ] {
     | run-external $install_cmd
     | print -e $in # don't write anything except result in the stdout, use the stderr or non-stdout prints
 
-  } catch {|err|
+  } catch { |err|
     print $err.rendered
     panic $"failed to install ($input)"
 
@@ -110,14 +111,14 @@ export def main [ input: string ] {
       match $env.method? {
         "git" => (
           $input | version via-git-remote-tags
-        ),
+        )
         _ => (
           try {
-          $input | get_version_via_cargo_info
+            $input | get_version_via_cargo_info
           } catch {
             cargo info $input
             | lines
-            | where {|line|
+            | where { |line|
               $line
               | str starts-with repository:
             }
@@ -126,7 +127,7 @@ export def main [ input: string ] {
             | last
             | version via-git-remote-tags
           }
-        ),
+        )
       } | version trim --other-dots-to-dashes $in
     } catch { "x.x.x" }
   )
@@ -155,11 +156,11 @@ export def main [ input: string ] {
               $env.target
             ] | path join
           ) | path expand
-        } catch {||
+        } catch { ||
           fs find exec ./out/bin/
           | first
         }
-      } catch {||
+      } catch { ||
         null
       }
     )
