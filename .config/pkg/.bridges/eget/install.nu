@@ -3,17 +3,17 @@ use ../.shared/fs 'fs find exec';
 use ./get_path.nu 'get path';
 use ../.shared/pkg 'pkg new';
 use ../.shared/version [
-'version via-git-remote-tags',
-'version via-github-tags'
-'version via-cli'
-'version trim'
+  'version via-git-remote-tags'
+  'version via-github-tags'
+  'version via-cli'
+  'version trim'
 ];
 
 const VERSION_FALLBACK = 'x.x.x'
 const EGET_SECRET_FILE_PATH = '~/.env/eget/github_token'
 
-export def main [input: string] {
-  let config: record = ( try { open ./config.nuon } );
+export def main [ input: string ] {
+  let config: record = (try { open ./config.nuon });
 
   mkdir out
 
@@ -26,17 +26,20 @@ export def main [input: string] {
   ]
 
   let opts = (
-    push if exist --pass-value --allow-empty  [] [
+    push if exist --pass-value --allow-empty [ ] [
       [
         { "--file": [ $env.file? ] }
-        { "--all": [ $env.all?, false ] }
-        { "--download-only": [ $env.keep_structure?, false ] }
+        { "--all": [ $env.all? false ] }
+        { "--download-only": [ $env.keep_structure? false ] }
       ]
       [
         { "--asset": [ $env.asset? ] }
       ]
       [
         { "--tag": [ $env.tag? ] }
+      ]
+      [
+        { "--pre-release": [ $env.pre_release? false ] }
       ]
     ]
   )
@@ -48,8 +51,8 @@ export def main [input: string] {
   try {
     with-env {
       EGET_GITHUB_TOKEN: (
-        if ( $config.use_authorised_install? | default false ) {
-          open ( $EGET_SECRET_FILE_PATH | path expand )
+        if ($config.use_authorised_install? | default false) {
+          open ($EGET_SECRET_FILE_PATH | path expand)
         }
       )
     } {
@@ -58,18 +61,18 @@ export def main [input: string] {
 
     }
 
-  } catch {|err|
+  } catch { |err|
     print $err.rendered
     panic "failed to run eget command"
 
   }
 
-  if ( $env.keep_structure? | is-not-empty ) {
+  if ($env.keep_structure? | is-not-empty) {
     ls --all out
-    | each {|file|
+    | each { |file|
       try {
-        tar -xf ( $file | get name ) -C out
-        rm -rf ( $file | get name )
+        tar -xf ($file | get name) -C out
+        rm -rf ($file | get name)
 
       } catch { ignore }
 
@@ -77,11 +80,11 @@ export def main [input: string] {
 
   }
 
-  if ( $env.after_hook? | is-not-empty ) {
+  if ($env.after_hook? | is-not-empty) {
     try {
       nu -c $env.after_hook
 
-    } catch {|err|
+    } catch { |err|
       print $err.rendered
       panic "failed to run after install hook"
 
@@ -96,24 +99,24 @@ export def main [input: string] {
   mut version = $VERSION_FALLBACK
   mut i = 0
   let get_ways = [
-    {|input| version via-github-tags $input }
-    {|input| $input | version via-git-remote-tags }
-    {|input| $input | version via-cli }
+    { |input| version via-github-tags $input }
+    { |input| $input | version via-git-remote-tags }
+    { |input| $input | version via-cli }
   ]
 
-  while ( $version == $VERSION_FALLBACK ) and $i <= ( $get_ways | length ) {
+  while ($version == $VERSION_FALLBACK) and $i <= ($get_ways | length) {
     $version = (
       $get_ways
       | get $i
       | (
         try {
           do $in $input
-          | ( version trim $in )
+          | (version trim $in)
         } catch { $VERSION_FALLBACK }
       )
     )
   }
 
-  return ( pkg new $res.path $version $res.entry_point )
+  return (pkg new $res.path $version $res.entry_point)
 
 }

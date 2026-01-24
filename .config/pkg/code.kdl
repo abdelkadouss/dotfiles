@@ -2,7 +2,7 @@ eget {
   meteor "stefanlogue/meteor" // a tool to write a better commit messages in Chaa'Allah
   hx "helix-editor/helix" keep_structure=#true target="*" entry_point="hx" // a code editor
   // hx "usagi-flow/evil-helix" keep_structure=#true entry_point="hx" // a fork of helix that uses the nvim editing model
-  nvim "neovim/neovim" keep_structure=#true target="*" entry_point="bin/nvim" // a text editor
+  nvim "neovim/neovim" keep_structure=#true target="*" entry_point="bin/nvim" pre_release=#true // a text editor
 
   direnv "direnv/direnv" // a tool to manage your environment
 
