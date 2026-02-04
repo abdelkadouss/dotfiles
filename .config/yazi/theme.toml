@@ -2,6 +2,36 @@
 use = "catppuccin-mocha"
 dark = "catppuccin-mocha"
 
+[[icon.prepend_conds]]
+if = "dir"
+text = ""
+fg = "lightyellow"
+
+[icon]
+dirs = [
+  { name = "Desktop", text = "󰍹", fg = "lightyellow" },
+  { name = "Downloads", text = "󰉍", fg = "lightyellow" },
+  { name = "Documents", text = "󱧶", fg = "lightyellow" },
+  { name = "code", text = "", fg = "green" },
+  { name = "Movies", text = "", fg = "lightyellow" },
+  { name = "Pictures", text = "󰉏", fg = "lightyellow" },
+  { name = "bin", text = "󱧺", fg = "red" },
+  { name = "backup", text = "󰝉", fg = "blue" },
+  { name = "src", text = "󰴉", fg = "green" },
+  { name = "tmp", text = "󰪺", fg = "blue" },
+  { name = "lib", text = "󰣞", fg = "yellow" },
+  { name = "test", text = "󱞊", fg = "lightblue" },
+  { name = "tests", text = "󱞊", fg = "lightblue" },
+  { name = ".config", text = "󱧼", fg = "cyan" },
+  { name = "build", text = "󰛫", fg = "black" },
+  { name = "dist", text = "󰛫", fg = "black" },
+  { name = "out", text = "󰛫", fg = "black" },
+  { name = "macos", text = "󰀶", fg = "magenta" },
+  { name = "ios", text = "󰀷", fg = "blue" },
+  { name = "linux", text = "", fg = "green" },
+  { name = "android", text = "󰀴", fg = "lightgreen" },
+]
+
 [[icon.files]]
 name = ".babelrc"
 text = ""
