@@ -1,7 +1,7 @@
 eget {
   meteor "stefanlogue/meteor" // a tool to write a better commit messages in Chaa'Allah
   hx "helix-editor/helix" keep_structure=#true target="*" entry_point="hx" // a code editor
-  // hx "usagi-flow/evil-helix" keep_structure=#true entry_point="hx" // a fork of helix that uses the nvim editing model
+  // hx "usagi-flow/evil-helix" keep_structure=#true target="*" entry_point="hx" // a fork of helix that uses the nvim editing model
   nvim "neovim/neovim" keep_structure=#true target="*" entry_point="bin/nvim" pre_release=#true // a text editor
 
   direnv "direnv/direnv" // a tool to manage your environment
@@ -12,7 +12,7 @@ eget {
 
   git-filter-repo "newren/git-filter-repo" // Quickly rewrite git repository history (filter-branch replacement)
   git-lfs "git-lfs/git-lfs" // Git extension for versioning large files
-
+  git-bug "git-bug/git-bug" // Git extension which is distributed, offline-first bug tracker embedded in git that have a tui/cli/gui(web).
 
 }
 
@@ -22,6 +22,6 @@ cargo {
   hyperfine // a benchmarking tool
 }
 
-go {
+/-go {
   new "github.com/yarlson/cutr@latest" // make new projects from templates insha'Allah
 }

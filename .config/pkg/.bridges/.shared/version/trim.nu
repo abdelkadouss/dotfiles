@@ -6,7 +6,9 @@ export def 'version trim' [
   | str trim
   | (
     if ( $in | split row '.' | length ) < 3 {
-      panic $"version must have at least 3 parts separated by dots. ($in)"
+       error make {
+         msg: $"version must have at least 3 parts separated by dots. ($in)"
+       }
 
     } else { $in }
   )

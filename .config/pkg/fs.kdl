@@ -14,7 +14,7 @@ eget {
 }
 
 cargo {
-  dua // a better du
+  dua "dua-cli" // a better du
   zoxide // a better cd
   rg "ripgrep" // a better grep
   fd "fd-find" // a better find

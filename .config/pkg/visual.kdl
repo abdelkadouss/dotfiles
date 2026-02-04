@@ -11,6 +11,7 @@ cargo {
   asciinema "https://github.com/asciinema/asciinema" method="git" // a tool to record terminal videos (gifs)
   agg "https://github.com/asciinema/agg" method="git" // make gifs from asciicasts insha'Allah
   mdbook // a tool to make a book from markdown
+  mdbook-d2 // D2 diagram generator plugin for MdBook
   delta "git-delta" // a git pager
   resvg // a tool to convert svgs (used -also- by yazi to view the svgs)
 }

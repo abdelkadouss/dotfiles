@@ -15,6 +15,7 @@ cargo {
   rustlings // small exercises to get you used to reading and writing Rust code
   mise // a version manager
   // nu-fmt "https://github.com/nushell/nufmt" method="git" // a formatter for nushell // this formatter not working and danger
+  tree-sitter-cli tree-sitter-cli locked=#true // the tree sitter cli
 }
 
 eget {
@@ -28,6 +29,10 @@ eget {
   docker-buildx "docker/buildx" asset="^.json" // Docker CLI plugin for extended build capabilities with BuildKit
   bun "oven-sh/bun" asset="^profile" // a fast js run time
   kdlc "osjupiter/kdlc" // A fast and efficient tool to convert KDL (KDL Document Language) files to JSON
+  lua-language-server "LuaLS/lua-language-server" keep_structure=#true target="*" entry_point="bin/lua-language-server"
+  rustowl "cordx56/rustowl" asset="^.tar.gz"
+  act "nektos/act" // run github actions locally
+  actionlint "rhysd/actionlint" // Static checker for GitHub Actions workflow files
 }
 
 // go {

@@ -97,14 +97,15 @@ export def main [ input: string ] {
   )
 
   mut version = $VERSION_FALLBACK
-  mut i = 0
+  mut i = -1;
   let get_ways = [
     { |input| version via-github-tags $input }
     { |input| $input | version via-git-remote-tags }
     { |input| $input | version via-cli }
   ]
 
-  while ($version == $VERSION_FALLBACK) and $i <= ($get_ways | length) {
+  while ($version == $VERSION_FALLBACK) and $i < ($get_ways | length) {
+    $i += 1;
     $version = (
       $get_ways
       | get $i

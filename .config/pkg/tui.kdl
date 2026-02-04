@@ -25,4 +25,5 @@ cargo {
 
   obs "basalt-tui" // a tui for obsidian
   tgt "tgt" method="crate" // a telegram tui // NOTE: the binstall version is broken
+  openapi-tui // Terminal UI to list, browse and run APIs defined with openapi spec.
 }
