@@ -153,6 +153,7 @@ keybinds clear-defaults=true {
     bind "Alt z" { TogglePaneFrames; SwitchToMode "locked"; }
     bind "Alt n" { NewPane; }
     bind "Alt o" { MoveTab "right"; }
+    bind "Alt p" { ToggleFocusFullscreen; }
     // bind "Alt y" {
     //   LaunchOrFocusPlugin "file:/Users/abdelkdous/.config/zellij/plugins/zellij_forgot.wasm" {
     //     "lock"                  "ctrl + g"
@@ -295,7 +296,7 @@ simplified_ui true
 // Choose the theme that is specified in the themes section.
 // Default: default
 // 
-theme "tokyo-night"
+theme "catppuccin-mocha"
 
 // Choose the base input mode of zellij.
 // Default: normal
